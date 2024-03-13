@@ -13,13 +13,6 @@
             "alignment": ""
           }
         },
-        "text_WcPqhG": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": "<p>© 2019-2024 ALNEST<br\/>clothing, footwear & accessories brand<\/p>"
-          }
-        },
         "text_ppenLc": {
           "type": "text",
           "settings": {
@@ -48,6 +41,13 @@
             "menu": "footer-menu-company"
           }
         },
+        "text_WcPqhG": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>© 2019-2024 ALNEST<br\/>clothing, footwear & accessories brand<\/p>"
+          }
+        },
         "text_gCj9JX": {
           "type": "text",
           "disabled": true,
@@ -59,11 +59,11 @@
       },
       "block_order": [
         "image_dG3frk",
-        "text_WcPqhG",
         "text_ppenLc",
         "link_list_tzWGb3",
         "link_list_JQpcVi",
         "link_list_hEr4Df",
+        "text_WcPqhG",
         "text_gCj9JX"
       ],
       "custom_css": [
@@ -85,8 +85,8 @@
         "payment_enable": false,
         "show_policy": false,
         "margin_top": 20,
-        "padding_top": 36,
-        "padding_bottom": 20
+        "padding_top": 52,
+        "padding_bottom": 68
       }
     }
   },
