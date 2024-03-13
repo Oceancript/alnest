@@ -22,6 +22,12 @@
     "collection_list_fKffjp": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_LtfXLe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "жіночий-одяг-1"
+          }
+        },
         "featured_collection_MnTnTT": {
           "type": "featured_collection",
           "settings": {
@@ -39,27 +45,21 @@
           "settings": {
             "collection": "взуття-1"
           }
-        },
-        "featured_collection_LtfXLe": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "жіночий-одяг-1"
-          }
         }
       },
       "block_order": [
+        "featured_collection_LtfXLe",
         "featured_collection_MnTnTT",
         "featured_collection_eRnVjB",
-        "featured_collection_3FMrrR",
-        "featured_collection_LtfXLe"
+        "featured_collection_3FMrrR"
       ],
       "custom_css": [
         ".card {position: relative;}",
         ".card__inner:after {position: absolute; width: 100%; height: 100%; background: linear-gradient(to top, #000000 -70%, transparent); z-index: 10;}",
-        ".card .card__content {position: absolute; bottom: 0;}",
+        ".card .card__content {position: absolute; bottom: 40px;}",
         ".card .card__heading {font-weight: 500; color: #ffffff; text-transform: uppercase;}",
         ".card .icon-wrap {display: none;}",
-        ".card__inner .card__content,.card__inner {position: static !important;}",
+        ".card__inner .card__content,.card__inner {position: static;}",
         ".card__inner .card__information {position: absolute; width: 100%; height: 100%; top: 0; z-index: 20; opacity: 0; left: 0; display: block;}"
       ],
       "settings": {
