@@ -64,7 +64,7 @@
         ".footer-block:first-child {grid-column-start: span 2;}",
         ".footer-block {width: auto;}",
         "@media screen and (min-width: 600px) {.footer__blocks-wrapper {row-gap: 50px; grid-template-columns: repeat(2, 1fr); } .footer__content-top {padding: 0 5.5rem; }}",
-        "@media screen and (min-width: 1200px) {.footer-block:first-child {grid-column-start: span 1; } .footer__blocks-wrapper {grid-template-columns: repeat(5, 1fr); }}"
+        "@media screen and (min-width: 1200px) {.footer-block:first-child {grid-column-start: span 1; } .footer__blocks-wrapper {grid-template-columns:30% auto auto auto auto; }}"
       ],
       "settings": {
         "color_scheme": "scheme-6fa6a953-aab2-4f0e-b215-49c9ea0491c3",
