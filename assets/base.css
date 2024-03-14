@@ -2574,8 +2574,10 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 24px;
-  width: 24px;
+  max-height: 24px;
+  max-width: 24px;
+  width: 2vw;
+  height: 2vw;
   fill: none;
   vertical-align: middle;
 }
