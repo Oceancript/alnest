@@ -13,7 +13,18 @@
   .localization-button{
     text-transform: uppercase;
     text-decoration: none;
+    position: relative;
   }
+
+    .localization-button +  .localization-button:before{
+        content: "";
+        position: absolute;
+        left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: #000000; 
+    }
   
   .localization-button.active {
     color: #ccc;
