@@ -2587,11 +2587,6 @@ product-info .loading__spinner:not(.hidden) ~ *,
   padding: 0;
 }
 
-.header__icon--cart .icon{
-    height: 2.2rem;
-    width: 2.2rem;
-}
-
 .header__icon--cart {
   position: relative;
   margin-right: -1.2rem;
