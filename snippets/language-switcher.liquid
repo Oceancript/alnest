@@ -13,8 +13,8 @@
     item.addEventListener("click", event => {
       // Получаем код языка из атрибута lang кнопки
       var langCode = item.getAttribute("lang");
-      // Устанавливаем значение поля формы на код языка
-      document.querySelector("#localization_form_tag [name='locale_code']").value = langCode;
+      // Находим скрытое поле формы с именем "locale_code" и устанавливаем его значение на код языка
+      document.querySelector("#localization_form_tag input[name='locale_code']").value = langCode;
       // Отправляем форму
       document.getElementById("localization_form_tag").submit();
     });
