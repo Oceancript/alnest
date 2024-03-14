@@ -19,6 +19,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    console.log({{ localization }})
     // Получаем текущий выбранный язык из localStorage, если есть
     var selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
