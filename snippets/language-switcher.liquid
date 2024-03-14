@@ -18,25 +18,39 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    // Получаем текущий выбранный язык из localStorage, если есть
     var selectedLanguage = localStorage.getItem('selectedLanguage');
-    if (selectedLanguage) {
-      var selectedButton = document.getElementById("locale_item_" + selectedLanguage);
-      if (selectedButton) {
-        selectedButton.classList.add("active");
-      }
+    if (!selectedLanguage) {
+      // Если выбранный язык не найден в localStorage, устанавливаем язык по умолчанию
+      selectedLanguage = "{{ localization.country.iso_code }}"; // Предполагается, что localization.country.iso_code содержит код языка по умолчанию
+      // Сохраняем язык по умолчанию в localStorage
+      localStorage.setItem('selectedLanguage', selectedLanguage);
+    }
+
+    // Добавляем класс "active" к кнопке языка по умолчанию
+    var defaultButton = document.getElementById("locale_item_" + selectedLanguage);
+    if (defaultButton) {
+      defaultButton.classList.add("active");
     }
 
     document.querySelectorAll(".localization-button").forEach(item => {
       item.addEventListener("click", event => {
+        // Удаление класса "active" у всех кнопок
         document.querySelectorAll(".localization-button").forEach(button => {
           button.classList.remove("active");
         });
+        // Добавление класса "active" к выбранной кнопке
         item.classList.add("active");
+        // Получаем код языка из атрибута lang кнопки
         var langCode = item.getAttribute("lang");
+        // Сохраняем выбранный язык в localStorage
         localStorage.setItem('selectedLanguage', langCode);
+        // Получаем скрытое поле формы
         var localeCodeField = document.querySelector("#localization_form_tag input[name='locale_code']");
         if (localeCodeField) {
+          // Устанавливаем значение скрытого поля формы на код языка
           localeCodeField.value = langCode;
+          // Отправляем форму
           document.getElementById("localization_form_tag").submit();
         } else {
           console.error("Поле формы не найдено");
