@@ -16,34 +16,34 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var selectedLanguage = localStorage.getItem('selectedLanguage');
-    if (!selectedLanguage) {
-      selectedLanguage = "{{ localization.language.iso_code }}"; 
-      localStorage.setItem('selectedLanguage', selectedLanguage);
-    }
+  // document.addEventListener("DOMContentLoaded", function() {
+  //   var selectedLanguage = localStorage.getItem('selectedLanguage');
+  //   if (!selectedLanguage) {
+  //     selectedLanguage = "{{ localization.language.iso_code }}"; 
+  //     localStorage.setItem('selectedLanguage', selectedLanguage);
+  //   }
 
-    var defaultButton = document.getElementById("locale_item_" + selectedLanguage);
-    if (defaultButton) {
-      defaultButton.classList.add("active");
-    }
+  //   var defaultButton = document.getElementById("locale_item_" + selectedLanguage);
+  //   if (defaultButton) {
+  //     defaultButton.classList.add("active");
+  //   }
 
-    document.querySelectorAll(".localization-button").forEach(item => {
-      item.addEventListener("click", event => {
-        document.querySelectorAll(".localization-button").forEach(button => {
-          button.classList.remove("active");
-        });
-        item.classList.add("active");
-        var langCode = item.getAttribute("lang");
-        localStorage.setItem('selectedLanguage', langCode);
-        var localeCodeField = document.querySelector("#localization_form_tag input[name='locale_code']");
-        if (localeCodeField) {
-          localeCodeField.value = langCode;
-          document.getElementById("localization_form_tag").submit();
-        } else {
-          console.error("Поле формы не найдено");
-        }
-      });
-    });
-  });
+  //   document.querySelectorAll(".localization-button").forEach(item => {
+  //     item.addEventListener("click", event => {
+  //       document.querySelectorAll(".localization-button").forEach(button => {
+  //         button.classList.remove("active");
+  //       });
+  //       item.classList.add("active");
+  //       var langCode = item.getAttribute("lang");
+  //       localStorage.setItem('selectedLanguage', langCode);
+  //       var localeCodeField = document.querySelector("#localization_form_tag input[name='locale_code']");
+  //       if (localeCodeField) {
+  //         localeCodeField.value = langCode;
+  //         document.getElementById("localization_form_tag").submit();
+  //       } else {
+  //         console.error("Поле формы не найдено");
+  //       }
+  //     });
+  //   });
+  // });
 </script>
