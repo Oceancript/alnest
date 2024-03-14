@@ -2588,8 +2588,8 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .header__icon--cart .icon{
-    height: 2rem;
-  width: 2rem;
+    height: 2.1rem;
+    width: 2.1rem;
 }
 
 .header__icon--cart {
