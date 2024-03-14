@@ -1,0 +1,16 @@
+{%- form 'localization', id: 'localization_form_tag', class: 'lang-switcher-form' -%}
+  <div class="localization-form__buttons">
+    {% for locale in shop.published_Locales %}
+    <button id="locale_item" class="localization-button link" lang="{{ locale.iso_code }}" >{{ locale.endonym_name }}</button>
+    {% endfor %}
+  </div>
+{%- endform -%}
+
+<script>
+  document.querySelectorAll("#locale_item").foreach(item => {
+    item.addEventListener("click", event => {
+      // document.getElementById("localeCode").value = item.getAttribute("lang");
+      document.getElementById("localization_form_tag").submit();
+    })
+  })
+</script>
