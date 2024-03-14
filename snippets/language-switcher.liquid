@@ -1,15 +1,21 @@
-{%- form 'localization', id: 'localization_form_tag', class: 'lang-switcher-form' -%}
-  <div class="localization-form__buttons">
-    {% for locale in localization.available_countries %}
-    <button id="locale_item" class="localization-button link" lang="{{ locale.iso_code }}" >{{ locale.endonym_name }}</button>
-    {% endfor %}
-  </div>
-{%- endform -%}
+{%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+  {%- form 'localization', id: 'localization_form_tag', class: 'lang-switcher-form' -%}
+    <div class="localization-form__buttons">
+      {% for language in localization.available_languages %}
+        <button id="locale_item_{{ language.iso_code }}" class="localization-button link" lang="{{ language.iso_code }}" >{{ language.endonym_name | capitalize }}</button>
+      {% endfor %}
+    </div>
+  {%- endform -%}
+{% endif %}
 
 <script>
   document.querySelectorAll(".localization-button").forEach(item => {
     item.addEventListener("click", event => {
-      // document.getElementById("localeCode").value = item.getAttribute("lang");
+      // Получаем код языка из атрибута lang кнопки
+      var langCode = item.getAttribute("lang");
+      // Устанавливаем значение поля формы на код языка
+      document.querySelector("#localization_form_tag [name='locale_code']").value = langCode;
+      // Отправляем форму
       document.getElementById("localization_form_tag").submit();
     });
   });
