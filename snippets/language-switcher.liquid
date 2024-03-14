@@ -7,6 +7,7 @@
       {% endfor %}
     </div>
   {{ localization.country.iso_code }}
+        {{ localization }}
     <input type="hidden" name="locale_code" value="{{ localization.country.iso_code }}" />
   {%- endform -%}
 {% endif %}
@@ -19,7 +20,6 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    {{ localization }}
     // Получаем текущий выбранный язык из localStorage, если есть
     var selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
