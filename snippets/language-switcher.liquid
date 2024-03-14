@@ -2,7 +2,7 @@
   {%- form 'localization', id: 'localization_form_tag', class: 'lang-switcher-form' -%}
     <div class="localization-form__buttons">
       {% for language in localization.available_languages %}
-        <button id="locale_item_{{ language.iso_code }}" class="localization-button link" lang="{{ language.iso_code }}" >{{ language.iso_code | capitalize }}</button>
+        <button id="locale_item_{{ language.iso_code }}" class="localization-button link" lang="{{ language.iso_code }}" >{{ language.iso_code == 'uk' ? 'ua' | capitalize : language.iso_code | capitalize }}</button>
       {% endfor %}
     </div>
     <!-- <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}" /> -->
