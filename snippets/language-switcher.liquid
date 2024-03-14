@@ -1,6 +1,6 @@
 {%- form 'localization', id: 'localization_form_tag', class: 'lang-switcher-form' -%}
   <div class="localization-form__buttons">
-    {% for locale in shop.published_Locales %}
+    {% for locale in localization.available_countries %}
     <button id="locale_item" class="localization-button link" lang="{{ locale.iso_code }}" >{{ locale.endonym_name }}</button>
     {% endfor %}
   </div>
