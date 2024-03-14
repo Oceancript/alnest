@@ -5,6 +5,8 @@
         <button id="locale_item_{{ language.iso_code }}" class="localization-button link" lang="{{ language.iso_code }}" >{{ language.endonym_name | capitalize }}</button>
       {% endfor %}
     </div>
+
+    <input type="hidden" name="locale_code" value="{{ localization.country.iso_code }}" />
   {%- endform -%}
 {% endif %}
 
