@@ -14,10 +14,17 @@
       item.addEventListener("click", event => {
         // Получаем код языка из атрибута lang кнопки
         var langCode = item.getAttribute("lang");
+        console.log("Выбран язык:", langCode); // Добавляем отладочное сообщение
         // Находим скрытое поле формы с именем "locale_code" и устанавливаем его значение на код языка
-        document.querySelector("#localization_form_tag input[name='locale_code']").value = langCode;
-        // Отправляем форму
-        document.getElementById("localization_form_tag").submit();
+        var localeCodeField = document.querySelector("#localization_form_tag input[name='locale_code']");
+        console.log("Поле формы:", localeCodeField); // Добавляем отладочное сообщение
+        if (localeCodeField) {
+          localeCodeField.value = langCode;
+          // Отправляем форму
+          document.getElementById("localization_form_tag").submit();
+        } else {
+          console.error("Поле формы не найдено");
+        }
       });
     });
   });
