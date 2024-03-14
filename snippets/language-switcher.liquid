@@ -22,7 +22,7 @@
     var selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
       // Если выбранный язык не найден в localStorage, устанавливаем язык по умолчанию
-      selectedLanguage = "{{ localization.country.iso_code }}"; // Предполагается, что localization.country.iso_code содержит код языка по умолчанию
+      localStorage.setItem('selectedLanguage',  "{{ localization.country.iso_code }}"); // Предполагается, что localization.country.iso_code содержит код языка по умолчанию
       // Сохраняем язык по умолчанию в localStorage
       localStorage.setItem('selectedLanguage', selectedLanguage);
     }
