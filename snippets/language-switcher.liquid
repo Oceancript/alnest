@@ -18,15 +18,22 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    var selectedLanguage = localStorage.getItem('selectedLanguage');
+    if (selectedLanguage) {
+      var selectedButton = document.getElementById("locale_item_" + selectedLanguage);
+      if (selectedButton) {
+        selectedButton.classList.add("active");
+      }
+    }
+
     document.querySelectorAll(".localization-button").forEach(item => {
       item.addEventListener("click", event => {
-        // Удаление класса "active" у всех кнопок
         document.querySelectorAll(".localization-button").forEach(button => {
           button.classList.remove("active");
         });
-        // Добавление класса "active" к выбранной кнопке
         item.classList.add("active");
         var langCode = item.getAttribute("lang");
+        localStorage.setItem('selectedLanguage', langCode);
         var localeCodeField = document.querySelector("#localization_form_tag input[name='locale_code']");
         if (localeCodeField) {
           localeCodeField.value = langCode;
