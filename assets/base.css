@@ -2537,7 +2537,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 /* Header icons */
 
-.menu_bureger{
+.header__icon--menu{
   margin-left: 18px;
 }
 
