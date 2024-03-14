@@ -2536,6 +2536,11 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 /* Header icons */
+
+.menu_bureger{
+  margin-left: 18px;
+}
+
 .header__icons {
   display: flex;
   grid-area: icons;
