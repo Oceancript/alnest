@@ -29,6 +29,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "@media screen and (max-width: 989px) {.header--mobile-left {grid-template-columns: auto 1fr 2fr;}}"
+      ],
       "settings": {
         "logo_position": "middle-center",
         "menu": "main-menu",
