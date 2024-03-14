@@ -19,7 +19,7 @@
   document.addEventListener("DOMContentLoaded", function() {
     var selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
-      localStorage.setItem('selectedLanguage',  "{{ localization.language.iso_code }}");
+      selectedLanguage = "{{ localization.language.iso_code }}"; 
       localStorage.setItem('selectedLanguage', selectedLanguage);
     }
 
