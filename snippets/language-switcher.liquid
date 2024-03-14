@@ -2,12 +2,10 @@
   {%- form 'localization', id: 'localization_form_tag', class: 'lang-switcher-form' -%}
     <div class="localization-form__buttons">
       {% for language in localization.available_languages %}
-        {{ language.iso_code }}
         <button id="locale_item_{{ language.iso_code }}" class="localization-button link" lang="{{ language.iso_code }}" >{{ language.endonym_name | capitalize }}</button>
       {% endfor %}
     </div>
-  {{ localization.language.iso_code }}
-    <input type="hidden" name="locale_code" value="{{ localization.country.iso_code }}" />
+    <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}" />
   {%- endform -%}
 {% endif %}
 
@@ -19,10 +17,9 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // Получаем текущий выбранный язык из localStorage, если есть
     var selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
-      localStorage.setItem('selectedLanguage',  "{{ localization.country.iso_code }}"); // Предполагается, что localization.country.iso_code содержит код языка по умолчанию
+      localStorage.setItem('selectedLanguage',  "{{ localization.language.iso_code }}");
       localStorage.setItem('selectedLanguage', selectedLanguage);
     }
 
