@@ -282,15 +282,6 @@
               <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
             {%- endform -%}
           </noscript>
-
-          <!-- <localization-form class="small-hide medium-hide no-js-hidden" data-prevent-hide>
-            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
-              </div>
-            {%- endform -%}
-          </localization-form> -->
           {% include 'language-switcher' %}
           
         {%- endif -%}
