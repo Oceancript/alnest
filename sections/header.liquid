@@ -239,7 +239,7 @@
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript class="small-hide medium-hide">
-            {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
+            <!-- {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
               <div class="localization-form__select">
                 <h2 class="visually-hidden" id="HeaderCountryMobileLabelNoScript">{{ 'localization.country_label' | t }}</h2>
                 <select class="localization-selector link" name="country_code" aria-labelledby="HeaderCountryMobileLabelNoScript">
@@ -252,7 +252,14 @@
                 {% render 'icon-caret' %}
               </div>
               <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
-            {%- endform -%}
+            {%- endform -%} -->
+            {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
+  <div class="localization-form__buttons">
+    <button class="localization-button link" name="country_code" value="en">English</button>
+    <button class="localization-button link" name="country_code" value="ua">Ukraine</button>
+  </div>
+  <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
+{%- endform -%}
           </noscript>
 
           <localization-form class="small-hide medium-hide no-js-hidden" data-prevent-hide>
