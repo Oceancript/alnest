@@ -6,8 +6,7 @@
         <button id="locale_item_{{ language.iso_code }}" class="localization-button link" lang="{{ language.iso_code }}" >{{ language.endonym_name | capitalize }}</button>
       {% endfor %}
     </div>
-  {{ localization.country.iso_code }}
-    {{ shop_locale.iso_code }}
+  {{ localization.language.iso_code }}
     <input type="hidden" name="locale_code" value="{{ localization.country.iso_code }}" />
   {%- endform -%}
 {% endif %}
@@ -20,7 +19,6 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    console.log({{ shop_locale.iso_code }})
     // Получаем текущий выбранный язык из localStorage, если есть
     var selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
