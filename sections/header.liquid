@@ -324,11 +324,11 @@
 
         {%- liquid
       if section.settings.menu != blank
-        render 'header-drawer', class: 'icon'
+        render 'header-drawer', class: 'icon menu_bureger'
       endif
 
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1', class: 'icon'
+        render 'header-search', input_id: 'Search-In-Modal-1', class: 'icon menu_bureger'
       endif
     -%}
     </div>
