@@ -2540,6 +2540,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   display: flex;
   grid-area: icons;
   justify-self: end;
+  gap: 18px;
   padding-right: 0.8rem;
 }
 
