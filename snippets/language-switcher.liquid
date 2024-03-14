@@ -10,19 +10,32 @@
   {%- endform -%}
 {% endif %}
 
+<style>
+  .localization-button {
+    /* Ваши основные стили кнопок */
+  }
+
+  .localization-button.active {
+    /* Стили для активной кнопки */
+    background-color: #ccc;
+    /* Другие стили при необходимости */
+  }
+</style>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".localization-button").forEach(item => {
       item.addEventListener("click", event => {
-        // Получаем код языка из атрибута lang кнопки
+        // Удаление класса "active" у всех кнопок
+        document.querySelectorAll(".localization-button").forEach(button => {
+          button.classList.remove("active");
+        });
+        // Добавление класса "active" к выбранной кнопке
+        item.classList.add("active");
         var langCode = item.getAttribute("lang");
-        console.log("Выбран язык:", langCode); // Добавляем отладочное сообщение
-        // Находим скрытое поле формы с именем "locale_code" и устанавливаем его значение на код языка
         var localeCodeField = document.querySelector("#localization_form_tag input[name='locale_code']");
-        console.log("Поле формы:", localeCodeField); // Добавляем отладочное сообщение
         if (localeCodeField) {
           localeCodeField.value = langCode;
-          // Отправляем форму
           document.getElementById("localization_form_tag").submit();
         } else {
           console.error("Поле формы не найдено");
