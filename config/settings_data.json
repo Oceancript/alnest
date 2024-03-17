@@ -412,6 +412,7 @@
       ".custom-banner {max-width: calc(var(--page-width) - 10rem);}",
       ".footer__content-top {padding: 0 1.5rem;}",
       ".footer__content-bottom {display: none;}",
+      ".footer-block{margin-bottom: 0px}",
       ".footer-block h5,.footer-block a,.footer-block p,.footer-block__details-content p {color: #848484 !important;}",
       ".footer-block .list-menu__item--link {padding: 7px;}",
       "@media screen and (min-width: 750px) {.custom-banner {margin: 0 5rem; }}",
