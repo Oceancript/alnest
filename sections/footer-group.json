@@ -67,9 +67,9 @@
         "text_gCj9JX"
       ],
       "custom_css": [
-        ".footer__blocks-wrapper {display: grid; grid-template-columns: repeat(2, 1fr);}",
+        ".footer__blocks-wrapper {display: grid; grid-template-columns: repeat(2, auto);}",
         ".footer-block {margin: 0;}",
-        ".footer-block:first-child {grid-column-start: span 2;}",
+        ".footer-block:first-child {display: none;}",
         ".footer-block {width: auto;}",
         "@media screen and (min-width: 600px) {.footer__blocks-wrapper {row-gap: 50px; grid-template-columns: repeat(2, 1fr); } .footer__content-top {padding: 0 5.5rem; }}",
         "@media screen and (min-width: 1200px) {.footer-block:first-child {grid-column-start: span 1; } .footer__blocks-wrapper {grid-template-columns: 30% auto auto auto auto; }}"
