@@ -4,6 +4,10 @@
         font-weight: 400;
   }
 
+  .product-card-wrapper .price__sale span s {
+      color:#A9A9A9;
+  }
+
 .product-card-wrapper .price__sale .price-item {
           font-size: 16px;
         font-weight: 400;
