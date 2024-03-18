@@ -307,6 +307,13 @@
         {%- endif -%}
       </a>
 
+
+
+ 
+        <a class="header__icon header__icon--account link " data-customer-id="guest" data-iid="e906cf8aaed79404015c747425e7d4171eec6604544d9d3e303fb03bb6b5cf91" data-url="wishlist.oldev.net" data-shop="adc7f4-22.myshopify.com" data-domain="adc7f4-22.myshopify.com">
+          {% render 'icon-account' %}
+        </a>
+      
             {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {% render 'icon-account' %}
