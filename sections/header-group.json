@@ -29,22 +29,6 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "basic_wishlist_buttons_kPEJtc": {
-          "type": "shopify:\/\/apps\/basic-wishlist\/blocks\/buttons\/1611f065-e251-4250-8609-2fa2f1877c57",
-          "settings": {
-            "text_color": "#121212",
-            "added_text_color": "#121212",
-            "text_size": 16,
-            "icon_color": "#000000",
-            "added_icon_color": "#000000",
-            "icon_width": 20
-          }
-        }
-      },
-      "block_order": [
-        "basic_wishlist_buttons_kPEJtc"
-      ],
       "custom_css": [
         "@media screen and (max-width: 989px) {.header--mobile-left {grid-template-columns: auto 1fr 2fr; }}"
       ],
