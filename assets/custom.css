@@ -1,11 +1,11 @@
 
 @media screen and (min-width: 1200px) {
-.footer_custom .footer-block h5,
-.footer_custom. .footer-block a,
-.footer_custom .footer-block p,
-.footer_custom .footer-block__details-content p {
-    font-size: 16px!important;
-     font-weight: 300!important; 
-}
+  .footer_custom .footer-block h5,
+  .footer_custom .footer-block a,
+  .footer_custom .footer-block p,
+  .footer_custom .footer-block__details-content p {
+      font-size: 16px!important;
+      font-weight: 300!important; 
+  }
 
 }
