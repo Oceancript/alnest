@@ -191,7 +191,7 @@
       "type": "featured-collection",
       "custom_css": [
         ".card__badge span {font-weight: 500; border-radius: 0px;}",
-        ".card--standard > .card__content .card__information {display: flex; align-items: center; justify-content: space-between;}",
+        ".card--standard > .card__content .card__information {display: flex; align-items: flex-start; justify-content: space-between;}",
         ".card__heading {flex-shrink: 0; font-size: 16px;}",
         ".card__content .card-information {text-align: right;}",
         ".card__content .card-information .price__container {font-weight: 500; font-size: 16px;}",
