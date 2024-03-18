@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) { */
   .footer_custom .footer-block h5,
   .footer_custom .footer-block a,
   .footer_custom .footer-block p,
@@ -8,4 +8,4 @@
       font-weight: 300!important; 
   }
 
-}
+/* } */
