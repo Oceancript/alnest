@@ -6,6 +6,10 @@
     top: 10px;
   }
 
+  .iWishAdd_card.iwishAdded{
+        fill: white;
+  }
+
 
   .favorites_header .icon{
       max-height: 24px;
