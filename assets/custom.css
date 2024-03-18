@@ -5,6 +5,11 @@
   }
 
 
+.card-information>*:not(.visually-hidden:first-child)+*:not(.rating):not(.card__information-volume-pricing-note) {
+  margin: 0;
+}
+
+
 @media screen and (min-width: 1200px) {
   .footer_custom .footer-block h2{
         font-size: 18px;
