@@ -8,8 +8,8 @@
 .footer_custom. .footer-block a,
 .footer_custom .footer-block p,
 .footer_custom .footer-block__details-content p {
-    font-size: 16px;
-     font-weight: 300; 
+    font-size: 16px!important;
+     font-weight: 300!important; 
 }
 
 }
