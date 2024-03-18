@@ -10,6 +10,9 @@
         fill: white;
   }
 
+  .favorites_header{
+      display: none;
+  }
 
   .favorites_header .icon{
       max-height: 24px;
@@ -49,6 +52,14 @@
 
 .card-information>*:not(.visually-hidden:first-child)+*:not(.rating):not(.card__information-volume-pricing-note) {
   margin: 0;
+}
+
+@media screen and (min-width: 760px) {
+
+  .favorites_header{
+      display: block;
+  }
+
 }
 
 
