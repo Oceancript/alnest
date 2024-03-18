@@ -4,6 +4,13 @@
         font-weight: 400;
   }
 
+  .footer_custom .footer-block h5,
+  .footer_custom .footer-block a,
+  .footer_custom .footer-block p,
+  .footer_custom .footer-block__details-content p {
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+  }
+
   .product-card-wrapper .price__sale span s {
       color:#A9A9A9;
   }
