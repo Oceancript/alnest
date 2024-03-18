@@ -2,6 +2,8 @@
   .iWishAdd_card{
     position: absolute;
     z-index: 10;
+    right: 15px;
+    top: 10px;
   }
 
 
