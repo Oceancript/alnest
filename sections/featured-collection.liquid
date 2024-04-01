@@ -63,6 +63,11 @@
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
         >
           {{ 'sections.featured_collection.view_all' | t }}
+         {% if section.settings.view_all_style == 'link' %}
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1"  stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          {%- endif -%}
         </a>
       </div>
     {%- endif -%}
