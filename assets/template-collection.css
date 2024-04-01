@@ -97,7 +97,8 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
-.collection__view-all a.link{
+.collection__view-all a.link,
+.collection__title .title{
     color: #000000;
     font-size:14px;
     font-weight: 400;
@@ -108,7 +109,8 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .collection__view-all a.link{
+  .collection__view-all a.link,
+  .collection__title .title{
     font-size:16px;
 }
 }
