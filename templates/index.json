@@ -56,7 +56,7 @@
       "custom_css": [
         ".card {position: relative;}",
         ".card__inner:after {position: absolute; width: 100%; height: 100%; background: linear-gradient(to top, #000000 -70%, transparent); z-index: 10;}",
-        ".card .card__content {position: absolute; bottom: 40px;}",
+        ".card .card__content {position: absolute; bottom: 20px;}",
         ".card .card__heading {font-weight: 500; color: #ffffff; text-transform: uppercase;}",
         ".card .icon-wrap {display: none;}",
         ".card__inner .card__content,.card__inner {position: static;}",
@@ -81,7 +81,7 @@
         "heading_AmCw7V": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>SPRING'24<\/strong>",
+            "heading": "SPRING'24",
             "heading_size": "h0"
           }
         },
@@ -111,7 +111,8 @@
       ],
       "custom_css": [
         ".banner__content {align-items: flex-end;}",
-        "@media screeen and (min-width: 1200px) {.banner__heading{font-size: 64px }}"
+        ".banner__heading {font-size: 36px; font-weight: 600;}",
+        "@media screen and (min-width: 1200px) {.banner__heading {font-size: 64px; }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Rectangle_77_1.png",
