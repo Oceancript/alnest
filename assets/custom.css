@@ -30,7 +30,8 @@
     flex-direction: column;
 }
 
-.footer-block__details-content {
+.footer-block__details-content:nth-child(2),
+.footer-block__details-content:nth-child(3){
     display: flex;
     flex-direction: column;
     justify-content: space-between;
