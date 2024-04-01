@@ -110,7 +110,8 @@
         "buttons_7jWPMB"
       ],
       "custom_css": [
-        ".banner__content {align-items: flex-end;}"
+        ".banner__content {align-items: flex-end;}",
+        "@media screeen and (min-width: 1200px) {.banner__heading{font-size: 64px }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Rectangle_77_1.png",
