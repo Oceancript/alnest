@@ -31,8 +31,7 @@
   }
 
   .footer_custom .footer-block h5,
-  .footer_custom .footer-block a,
-  .footer_custom .footer-block__details-content p {
+  .footer_custom .footer-block a{
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
