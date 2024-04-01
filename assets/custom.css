@@ -48,6 +48,10 @@
   margin: 0;
 }
 
+  .footer_custom .footer-block__details-content p {
+    margin-top: 7px
+  }
+
 
 @media screen and (min-width: 1200px) {
   .footer_custom .footer-block h2{
