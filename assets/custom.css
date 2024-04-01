@@ -36,7 +36,7 @@
     justify-content: space-between;
     flex-grow: 1;
 }
- .footer-block:last-child .footer-block__details-content{
+ .footer-block:nth-child(5) .footer-block__details-content{
        flex-grow: 0;
  }
 
