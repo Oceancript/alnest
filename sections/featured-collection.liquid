@@ -56,20 +56,20 @@
           {{ section.settings.title }}
         </h2>
             {%- if section.settings.show_view_all and more_in_collection -%}
-      <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        <a
-          href="{{ section.settings.collection.url }}"
-          class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
-          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
-        >
-          {{ 'sections.featured_collection.view_all' | t }}
-         {% if section.settings.view_all_style == 'link' %}
-          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L7 7L13 1"  stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-          {%- endif -%}
-        </a>
-      </div>
+            <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+              <a
+                href="{{ section.settings.collection.url }}"
+                class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+              >
+                {{ 'sections.featured_collection.view_all' | t }}
+               {% if section.settings.view_all_style == 'link' %}
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L7 7L13 1"  stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                {%- endif -%}
+              </a>
+            </div>
     {%- endif -%}
       {%- endif -%}
       <!-- {%- if section.settings.description != blank
