@@ -99,4 +99,11 @@
 }
 .collection__view-all a.link{
     color: #000000;
+    font-size:14px;
+}
+
+@mediaScreen and (min-width: 1200px) {
+  .collection__view-all a.link{
+    font-size:16px;
+}
 }
