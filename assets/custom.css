@@ -48,8 +48,8 @@
   margin: 0;
 }
 
-  .footer_custom .footer-block__details-content p {
-    margin-top: 7px
+  .footer_custom .footer-block__details-content h5::nth-child(3) {
+    margin: 7px 0px
   }
 
 
