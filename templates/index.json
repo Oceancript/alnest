@@ -3,6 +3,7 @@
     "image_banner": {
       "type": "image-banner",
       "custom_css": [
+        ".banner--large:not(.banner--adapt) {min-height: 48rem; }",
         "@media screen and (min-width: 1200px) {.banner--large:not(.banner--adapt) {min-height: 79rem; } .banner__media img {object-position: 0px -400px; }}"
       ],
       "settings": {
