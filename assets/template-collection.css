@@ -102,7 +102,7 @@
     font-size:14px;
 }
 
-@mediaScreen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .collection__view-all a.link{
     font-size:16px;
 }
