@@ -1,5 +1,44 @@
 {
   "sections": {
+    "171217606573fc2740": {
+      "type": "apps",
+      "blocks": {
+        "ez_add_breadcrumbs_app_block_K4d8DV": {
+          "type": "shopify:\/\/apps\/ez-add-breadcrumbs\/blocks\/app-block\/457dc635-4337-4779-8f31-361dd27778c8",
+          "settings": {
+            "show_breadcrumbs": true,
+            "color": "#000000",
+            "horizontal_alignment": "left",
+            "fontsize": 8,
+            "breadcrumb_font": "helvetica_n4",
+            "marginleft": 0,
+            "margintop": 0,
+            "marginright": 0,
+            "marginbottom": 0,
+            "show_home_link": true,
+            "show_last_crumb": true,
+            "home_page": "Home",
+            "home_url": "\/",
+            "all_uppercase": false,
+            "use_slider": false,
+            "article_use_tag": true,
+            "separator": "<span> › <\/span>",
+            "css_tablet": "\/* font-family: Helvetica; *\/",
+            "css_mobile": "\/* font-family: Helvetica; *\/",
+            "custom_css": "\/* font-family: Helvetica; *\/",
+            "css_last_crumb": "\/* font-weight: medium; *\/",
+            "css_hover": "\/* text-decoration-line: underline; *\/",
+            "menus": "*"
+          }
+        }
+      },
+      "block_order": [
+        "ez_add_breadcrumbs_app_block_K4d8DV"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -27,27 +66,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1712174739a26dae32": {
-      "type": "apps",
-      "blocks": {
-        "tt_breadcrumbs_seo_schema_breadcrumb_section_bpU4gU": {
-          "type": "shopify:\/\/apps\/tt-breadcrumbs-seo-schema\/blocks\/breadcrumbSection\/dda6b26d-4f1a-43c6-a94b-6443ed0f750b",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "tt_breadcrumbs_seo_schema_breadcrumb_section_bpU4gU"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
+    "171217606573fc2740",
     "banner",
-    "product-grid",
-    "1712174739a26dae32"
+    "product-grid"
   ]
 }
