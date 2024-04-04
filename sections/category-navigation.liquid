@@ -1,8 +1,8 @@
-{{ 'css-reset.css' | asset_url }}
-{{ 'base-custom.css' | asset_url }}
-{{ 'components.css' | asset_url }}
-{{ 'category-navigation.css' | asset_url }}
-{{ 'breadcrumbs.css' | asset_url }}
+{{ 'css-reset.css' | asset_url | stylesheet_tag }}
+{{ 'base-custom.css' | asset_url | stylesheet_tag }}
+{{ 'components.css' | asset_url | stylesheet_tag }}
+{{ 'category-navigation.css' | asset_url | stylesheet_tag -}}
+{{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
 
 <div class="category_navigation">
   <div class="container">
