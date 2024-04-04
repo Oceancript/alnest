@@ -1,0 +1,59 @@
+/* radio_filters*/
+.radio_filters {
+  font-size: 10px;
+  font-weight: 400;
+  appearance: none;
+  display: block;
+}
+
+.radio_filters::before {
+  content: attr(data-label) " ";
+  display: inherit;
+  padding: 10px 0px;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #000000;
+  overflow-wrap: break-word;
+}
+
+.radio_filters:checked::before {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media screen and (hover) {
+  .radio_filters:hover::before {
+    opacity: 0.5;
+  }
+}
+/* radio_filters end*/
+
+/* button_outline*/
+.button_outline {
+  padding: 10px 22px;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #000000;
+}
+
+.button_outline svg {
+  transition: all 0.4s ease;
+  stroke: #000000;
+}
+
+.button_outline:hover svg {
+  stroke: #ffffff;
+}
+
+.button_outline:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* button_outline end*/

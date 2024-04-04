@@ -1,0 +1,277 @@
+<link rel="stylesheet" href="{{ 'css-reset.css' | asset_url | stylesheet_tag }}">
+<link rel="stylesheet" href="{{ 'base-custom.css' | asset_url | stylesheet_tag }}">
+<link rel="stylesheet" href="{{ 'components.css' | asset_url | stylesheet_tag }}">
+<link rel="stylesheet" href="{{ 'category-navigation.css' | asset_url | stylesheet_tag }}">
+<link rel="stylesheet" href="{{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}">
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
+<div class="category_navigation">
+  <div class="container">
+    <div class="header_section">
+      <ul class="breadcrumbs">
+        <li><a href="#">Головна</a></li>
+        <li>/</li>
+        <li><a href="#">Каталог</a></li>
+        <li>/</li>
+        <li><a href="#" class="uppercase">women</a></li>
+        <li>/</li>
+        <li><a href="#" class="active">Сукні</a></li>
+      </ul>
+
+      <div class="navigation">
+        <button
+          id="sorting_button"
+          class="sorting_button hover_opacity uppercase"
+        >
+          <span>Сортувати</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 15 15"
+            fill="none"
+          >
+            <path
+              d="M12.2522 4.83465L7.85998 9.15747C7.76415 9.25227 7.63479 9.30545 7.49998 9.30545C7.36518 9.30545 7.23581 9.25227 7.13998 9.15747L2.74779 4.83559C2.65137 4.74083 2.52158 4.68774 2.38639 4.68774C2.25119 4.68774 2.12141 4.74083 2.02498 4.83559C1.9775 4.88188 1.93976 4.93721 1.914 4.99831C1.88823 5.05942 1.87496 5.12506 1.87496 5.19137C1.87496 5.25769 1.88823 5.32333 1.914 5.38443C1.93976 5.44553 1.9775 5.50086 2.02498 5.54715L6.41623 9.86903C6.70547 10.153 7.09463 10.3121 7.49998 10.3121C7.90533 10.3121 8.29449 10.153 8.58373 9.86903L12.975 5.54715C13.0226 5.50085 13.0605 5.44546 13.0863 5.38427C13.1122 5.32308 13.1255 5.25733 13.1255 5.1909C13.1255 5.12448 13.1122 5.05873 13.0863 4.99754C13.0605 4.93635 13.0226 4.88096 12.975 4.83465C12.8786 4.73989 12.7488 4.6868 12.6136 4.6868C12.4784 4.6868 12.3486 4.73989 12.2522 4.83465Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+        <button
+          id="filters_button"
+          class="filters_button hover_opacity uppercase"
+        >
+          <span>Фільтри</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 18 18"
+            fill="none"
+          >
+            <path
+              d="M15.9375 9.00004H6.67125M3.4005 9.00004H2.0625M3.4005 9.00004C3.4005 8.56641 3.57276 8.15054 3.87938 7.84392C4.186 7.5373 4.60187 7.36504 5.0355 7.36504C5.46913 7.36504 5.885 7.5373 6.19162 7.84392C6.49824 8.15054 6.6705 8.56641 6.6705 9.00004C6.6705 9.43367 6.49824 9.84954 6.19162 10.1562C5.885 10.4628 5.46913 10.635 5.0355 10.635C4.60187 10.635 4.186 10.4628 3.87938 10.1562C3.57276 9.84954 3.4005 9.43367 3.4005 9.00004ZM15.9375 13.9553H11.6265M11.6265 13.9553C11.6265 14.389 11.4538 14.8054 11.1471 15.112C10.8404 15.4187 10.4245 15.591 9.99075 15.591C9.55712 15.591 9.14125 15.418 8.83463 15.1114C8.52801 14.8048 8.35575 14.3889 8.35575 13.9553M11.6265 13.9553C11.6265 13.5216 11.4538 13.106 11.1471 12.7993C10.8404 12.4926 10.4245 12.3203 9.99075 12.3203C9.55712 12.3203 9.14125 12.4925 8.83463 12.7992C8.52801 13.1058 8.35575 13.5217 8.35575 13.9553M8.35575 13.9553H2.0625M15.9375 4.04479H13.6088M10.338 4.04479H2.0625M10.338 4.04479C10.338 3.61116 10.5103 3.19529 10.8169 2.88867C11.1235 2.58205 11.5394 2.40979 11.973 2.40979C12.1877 2.40979 12.4003 2.45208 12.5987 2.53425C12.7971 2.61641 12.9773 2.73685 13.1291 2.88867C13.2809 3.04049 13.4014 3.22074 13.4835 3.4191C13.5657 3.61747 13.608 3.83008 13.608 4.04479C13.608 4.2595 13.5657 4.47211 13.4835 4.67048C13.4014 4.86884 13.2809 5.04909 13.1291 5.20091C12.9773 5.35273 12.7971 5.47317 12.5987 5.55533C12.4003 5.6375 12.1877 5.67979 11.973 5.67979C11.5394 5.67979 11.1235 5.50753 10.8169 5.20091C10.5103 4.89429 10.338 4.47842 10.338 4.04479Z"
+              stroke="black"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="collapse">
+      <div id="sorting_collapse">
+        <div class="sorting_collapse">
+          <ul class="sorting_list">
+            <li>
+              <button class="text_primary underline">За замовчуванням</button>
+            </li>
+            <li>
+              <button class="text_primary">Ціна: низька > висока</button>
+            </li>
+            <li>
+              <button class="text_primary">Ціна: висока > низька</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="filter_collapse">
+        <div class="filter_collapse">
+          <div class="season_filter">
+            <p class="title_filter text_primary uppercase">Сезон:</p>
+            <div class="season_filter_list filter_list">
+              <input
+                class="radio_filters"
+                data-label="Зима"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Літо"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Демісезон"
+                type="checkbox"
+              >
+            </div>
+          </div>
+          <div class="size_filter">
+            <p class="title_filter text_primary uppercase">Розмір:</p>
+            <div class="size_filter_list filter_list">
+              <input
+                class="radio_filters"
+                data-label="XS"
+                type="checkbox"
+              >
+              <input class="radio_filters" data-label="S" type="checkbox">
+              <input class="radio_filters" data-label="M" type="checkbox">
+              <input class="radio_filters" data-label="L" type="checkbox">
+              <input
+                class="radio_filters"
+                data-label="XL"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="XXL"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="
+                  Індивідуальне
+                  пошиття
+                "
+                type="checkbox"
+              >
+            </div>
+          </div>
+          <div class="colors_filter">
+            <p class="title_filter text_primary uppercase">Колір:</p>
+            <div class="colors_filter_list filter_list">
+              <input
+                class="radio_filters"
+                data-label="Білий"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Чорний"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Сірий"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Синій"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Зелений"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Червоний"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Бежевий"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Фіолетовий"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Жовтий"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Мультиколірний"
+                type="checkbox"
+              >
+            </div>
+          </div>
+          <div class="colection_filter">
+            <p class="title_filter text_primary uppercase">Колекція:</p>
+            <div class="colection_filter_list filter_list">
+              <input
+                class="radio_filters"
+                data-label="Kvitka"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Casual"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Gentleman"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Sport"
+                type="checkbox"
+              >
+            </div>
+          </div>
+          <div class="availability_filter">
+            <p class="title_filter text_primary uppercase">Наявність:</p>
+            <div class="availability_filter_list filter_list">
+              <input
+                class="radio_filters"
+                data-label="В наявності"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters"
+                data-label="Під замовлення"
+                type="checkbox"
+              >
+            </div>
+          </div>
+          <div class="additional_filter">
+            <p class="title_filter text_primary uppercase">Додатково:</p>
+            <div class="additional_filter_list filter_list">
+              <input
+                class="radio_filters uppercase"
+                data-label="Sale"
+                type="checkbox"
+              >
+              <input
+                class="radio_filters uppercase"
+                data-label="New"
+                type="checkbox"
+              >
+            </div>
+          </div>
+          <div class="button_clear_box">
+            <button class="button_outline btn_clear_filters">
+              <span>Очистити</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="9"
+                height="8"
+                viewBox="0 0 9 8"
+                fill="none"
+              >
+                <path d="M1 0.5L8 7.5"  />
+                <path d="M8 0.5L1 7.5"  />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Category navigation",
+  "tag": "section",
+  "class": "",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Category Navigation App",
+      "type": "@category-navigation-app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default Settings"
+    }
+  ]
+}
+{% endschema %}

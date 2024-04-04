@@ -1,0 +1,33 @@
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+input{
+    margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1640px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.hover_opacity:hover {
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
