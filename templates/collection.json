@@ -39,8 +39,8 @@
         "include_margins": true
       }
     },
-    "category_navigation_AqzTW9": {
-      "type": "category-navigation",
+    "colection_filters_UNkGpV": {
+      "type": "colection-filters",
       "settings": {
       }
     },
@@ -75,7 +75,7 @@
   },
   "order": [
     "171217606573fc2740",
-    "category_navigation_AqzTW9",
+    "colection_filters_UNkGpV",
     "banner",
     "product-grid"
   ]
