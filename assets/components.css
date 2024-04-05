@@ -1,14 +1,13 @@
 /* radio_filters*/
-input.radio_filters {
+.checkbox_filters {
   font-size: 10px;
   font-weight: 400;
   appearance: none;
   display: block;
   width: 100%;
 }
-
-input.radio_filters::before {
-  content: attr(data-label) " ";
+.checkbox_filters {
+  /* content: attr(data-label) " "; */
   display: inherit;
   width: inherit;
   padding: 10px 0px;
@@ -21,13 +20,13 @@ input.radio_filters::before {
   overflow-wrap: break-word;
 }
 
-input.radio_filters:checked::before {
+.checkbox_filters.checked {
   background-color: #000000;
   color: #ffffff;
 }
 
 @media screen and (hover) {
-  input.radio_filters:hover::before {
+  .radio_filters:hover {
     opacity: 0.5;
   }
 }
