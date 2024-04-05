@@ -1,9 +1,16 @@
+p,
+ul {
+  margin: 0px;
+  list-style: none;
+  padding: 0;
+}
+
 #sorting_collapse,
 #filter_collapse {
   overflow: hidden;
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.1s ease;
+  transition: grid-template-rows 0.4s ease;
 }
 
 .filter_collapse,
@@ -74,8 +81,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 500px;
-  width: 100%;
+  margin: 0px;
+  gap: 60px;
 }
 
 .filter_list {
@@ -94,28 +101,36 @@
 
 .filter_collapse .season_filter {
   grid-column-start: span 12;
+  order: 1;
 }
 
 .filter_collapse .size_filter {
   grid-column-start: span 12;
+  order: 2;
 }
 
 .filter_collapse .colors_filter {
   grid-column-start: span 12;
+  order: 3;
 }
 
 .filter_collapse .colection_filter {
   grid-column-start: span 12;
+  order: 4;
 }
 
 .filter_collapse .availability_filter {
   grid-column-start: span 7;
+  order: 5;
 }
 
 .filter_collapse .additional_filter {
   grid-column-start: span 5;
+  order: 6;
 }
-
+.filter_collapse .button_clear_box {
+  order: 7;
+}
 .collapse .season_filter_list {
   grid-template-columns: 1fr 1fr;
 }
@@ -124,17 +139,19 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.filter_collapse .size_filter_list input:last-child {
+.filter_collapse .size_filter_list .colspan_2 {
   padding: 0;
   width: auto;
   grid-column-start: span 2;
   align-self: stretch;
   vertical-align: middle;
+  display: flex;
 }
 
-.filter_collapse .size_filter_list input:last-child::before {
+.filter_collapse .size_filter_list .colspan_2::before {
   padding: 0;
-  height: 95%;
+  height: auto;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,6 +191,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 430px) {

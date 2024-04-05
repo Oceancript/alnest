@@ -1,11 +1,20 @@
-{{ 'css-reset.css' | asset_url | stylesheet_tag }}
 {{ 'base-custom.css' | asset_url | stylesheet_tag }}
 {{ 'components.css' | asset_url | stylesheet_tag }}
 {{ 'colection-filters.css' | asset_url | stylesheet_tag -}}
 {{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign sort_by = collection.sort_by | default: collection.default_sort_by
+  if collection.url
+    assign results_url = collection.url
+  else
+    assign terms = collection.terms | escape
+    assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+  endif
+-%}
+
 <div class="category_navigation">
-  <div class="">
+  <div class="page-width">
     <div class="header_section">
       <ul class="breadcrumbs">
         <li><a href="#">Головна</a></li>
@@ -57,185 +66,112 @@
     <div class="collapse">
       <div id="sorting_collapse">
         <div class="sorting_collapse">
+          {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
           <ul class="sorting_list">
-            <li>
-              <button class="text_primary underline">За замовчуванням</button>
-            </li>
-            <li>
-              <button class="text_primary">Ціна: низька > висока</button>
-            </li>
-            <li>
-              <button class="text_primary">Ціна: висока > низька</button>
-            </li>
+            {%- for option in collection.sort_options -%}
+              <li>
+                <form action="?sort_by={{ option.value }}" method="GET">
+                  <input type="hidden" name="sort_by" value="{{ option.value }}">
+                  <button type="submit" class="text_primary {% if option.value == sort_by %}underline{% endif %}">
+                    {{ option.name | escape }}
+                  </button>
+                </form>
+              </li>
+            {%- endfor -%}
           </ul>
         </div>
       </div>
       <div id="filter_collapse">
         <div class="filter_collapse">
-          <div class="season_filter">
-            <p class="title_filter text_primary uppercase">Сезон:</p>
-            <div class="season_filter_list filter_list">
-              <input
-                class="radio_filters"
-                data-label="Зима"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Літо"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Демісезон"
-                type="checkbox"
-              >
-            </div>
-          </div>
-          <div class="size_filter">
-            <p class="title_filter text_primary uppercase">Розмір:</p>
-            <div class="size_filter_list filter_list">
-              <input
-                class="radio_filters"
-                data-label="XS"
-                type="checkbox"
-              >
-              <input class="radio_filters" data-label="S" type="checkbox">
-              <input class="radio_filters" data-label="M" type="checkbox">
-              <input class="radio_filters" data-label="L" type="checkbox">
-              <input
-                class="radio_filters"
-                data-label="XL"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="XXL"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="
-                  Індивідуальне
-                  пошиття
-                "
-                type="checkbox"
-              >
-            </div>
-          </div>
-          <div class="colors_filter">
-            <p class="title_filter text_primary uppercase">Колір:</p>
-            <div class="colors_filter_list filter_list">
-              <input
-                class="radio_filters"
-                data-label="Білий"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Чорний"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Сірий"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Синій"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Зелений"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Червоний"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Бежевий"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Фіолетовий"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Жовтий"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Мультиколірний"
-                type="checkbox"
-              >
-            </div>
-          </div>
-          <div class="colection_filter">
-            <p class="title_filter text_primary uppercase">Колекція:</p>
-            <div class="colection_filter_list filter_list">
-              <input
-                class="radio_filters"
-                data-label="Kvitka"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Casual"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Gentleman"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Sport"
-                type="checkbox"
-              >
-            </div>
-          </div>
-          <div class="availability_filter">
-            <p class="title_filter text_primary uppercase">Наявність:</p>
-            <div class="availability_filter_list filter_list">
-              <input
-                class="radio_filters"
-                data-label="В наявності"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters"
-                data-label="Під замовлення"
-                type="checkbox"
-              >
-            </div>
-          </div>
-          <div class="additional_filter">
-            <p class="title_filter text_primary uppercase">Додатково:</p>
-            <div class="additional_filter_list filter_list">
-              <input
-                class="radio_filters uppercase"
-                data-label="Sale"
-                type="checkbox"
-              >
-              <input
-                class="radio_filters uppercase"
-                data-label="New"
-                type="checkbox"
-              >
-            </div>
-          </div>
+          {%- for filter in collection.filters -%}
+            {% if filter.param_name == 'filter.v.option.season' %}
+              <div class="season_filter">
+                <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
+                <div class="season_filter_list filter_list">
+                  {%- for option in filter.values -%}
+                    <input
+                      class="radio_filters"
+                      data-label="{{ option.value }}"
+                      type="checkbox"
+                    >
+                  {%- endfor -%}
+                </div>
+              </div>
+            {% endif %}
+            {% if filter.param_name == 'filter.v.option.size' %}
+              <div class="size_filter">
+                <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
+                <div class="size_filter_list filter_list">
+                  {% for option in filter.values %}
+                    <input
+                      class="radio_filters {% if option.value.size > 3 %}colspan_2{% endif %}"
+                      data-label="{{ option.value }}"
+                      type="checkbox"
+                    >
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+            {% if filter.param_name == 'filter.v.option.color' %}
+              <div class="colors_filter">
+                <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
+                <div class="colors_filter_list filter_list">
+                  {%- for option in filter.values -%}
+                    <input
+                      class="radio_filters"
+                      data-label="{{ option.value }}"
+                      type="checkbox"
+                    >
+                  {%- endfor -%}
+                </div>
+              </div>
+            {% endif %}
+            {% if filter.param_name == 'filter.v.option.collection' %}
+              <div class="colection_filter">
+                <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
+                <div class="colection_filter_list filter_list">
+                  {%- for option in filter.values -%}
+                    <input
+                      class="radio_filters"
+                      data-label="{{ option.value }}"
+                      type="checkbox"
+                    >
+                  {%- endfor -%}
+                </div>
+              </div>
+            {% endif %}
+            {% if filter.param_name == 'filter.v.availability' %}
+              <div class="availability_filter">
+                <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
+                <div class="availability_filter_list filter_list">
+                  {%- for option in filter.values -%}
+                    <input
+                      class="radio_filters"
+                      data-label="{{ option.label }}"
+                      type="checkbox"
+                    >
+                  {%- endfor -%}
+                </div>
+              </div>
+            {% endif %}
+            {% if filter.param_name == 'filter.p.tag' %}
+              <div class="additional_filter">
+                <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
+                <div class="additional_filter_list filter_list">
+                  {%- for option in filter.values -%}
+                    <input
+                      class="radio_filters uppercase"
+                      data-label="{{ option.value }}"
+                      type="checkbox"
+                    >
+                  {%- endfor -%}
+                </div>
+              </div>
+            {% endif %}
+          {%- endfor -%}
           <div class="button_clear_box">
-            <button class="button_outline btn_clear_filters">
-              <span>Очистити</span>
+            <a href="{{ results_url }}" class="button_outline text_primary uppercase btn_clear_filters">
+              <span>{{ 'products.facets.clear' | t }}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="9"
@@ -246,7 +182,7 @@
                 <path d="M1 0.5L8 7.5"  />
                 <path d="M8 0.5L1 7.5"  />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </div>

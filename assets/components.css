@@ -1,14 +1,16 @@
 /* radio_filters*/
-.radio_filters {
+input.radio_filters {
   font-size: 10px;
   font-weight: 400;
   appearance: none;
   display: block;
+  width: 100%;
 }
 
-.radio_filters::before {
+input.radio_filters::before {
   content: attr(data-label) " ";
   display: inherit;
+  width: inherit;
   padding: 10px 0px;
   background-color: transparent;
   color: #000000;
@@ -19,13 +21,13 @@
   overflow-wrap: break-word;
 }
 
-.radio_filters:checked::before {
+input.radio_filters:checked::before {
   background-color: #000000;
   color: #ffffff;
 }
 
 @media screen and (hover) {
-  .radio_filters:hover::before {
+  input.radio_filters:hover::before {
     opacity: 0.5;
   }
 }
