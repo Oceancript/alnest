@@ -21,6 +21,7 @@ p {
   top: 20px;
   display: block;
   z-index: 15;
+  padding: 0;
 }
 
 .favorite-card .button_add_wishlist svg {
@@ -87,7 +88,7 @@ p {
   gap: 10px;
   flex-shrink: 0;
   background: #fff;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
 }
 
