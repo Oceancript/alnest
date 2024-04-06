@@ -10,7 +10,8 @@ ul {
   overflow: hidden;
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s ease;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .min_height,
@@ -21,6 +22,7 @@ ul {
 #filter_collapse.active,
 #sorting_collapse.active {
   grid-template-rows: 1fr;
+  opacity: 1;
 }
 #filter_collapse.no_animate,
 #sorting_collapse.no_animate {
@@ -78,7 +80,7 @@ ul {
 
 .sorting_collapse {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 
 .collapse .sorting_list {
@@ -87,6 +89,7 @@ ul {
   justify-content: space-between;
   margin: 0px;
   gap: 60px;
+  width: 100%;
 }
 
 .filter_list {
@@ -249,6 +252,9 @@ ul {
 }
 
 @media screen and (min-width: 576px) {
+  .collapse .sorting_list {
+    justify-content: flex-end;
+  }
 }
 
 @media screen and (min-width: 834px) {
