@@ -24,7 +24,6 @@ async function toggleSorting() {
   if (isFiltersOpen) {
     filterCollapse.classList.add('no_animate')
     filterCollapse.classList.remove('active')
-    sortingButton.classList.remove('active')
   }
   await setTimeout(() => {
     filterCollapse.classList.remove('no_animate')
