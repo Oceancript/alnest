@@ -24,17 +24,6 @@
     <div class="page-width">
       <div class="category_container">
         <div class="header_section">
-          {% comment %}
-            <ul class="breadcrumbs">
-              <li><a href="#">Головна</a></li>
-              <li>/</li>
-              <li><a href="#">Каталог</a></li>
-              <li>/</li>
-              <li><a href="#" class="uppercase">women</a></li>
-              <li>/</li>
-              <li><a href="#" class="active">Сукні</a></li>
-            </ul>
-          {% endcomment %}
           {% render 'breadcrumbs' %}
 
           <div class="navigation">
@@ -80,14 +69,19 @@
               {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
               <ul class="sorting_list">
                 {%- for option in collection.sort_options -%}
-                  <li>
-                    <form action="?sort_by={{ option.value }}" method="GET">
-                      <input type="hidden" name="sort_by" value="{{ option.value }}">
-                      <button type="submit" class="text_primary {% if option.value == sort_by %}underline{% endif %}">
-                        {{ option.name | escape }}
-                      </button>
-                    </form>
-                  </li>
+                  {% if option.value == 'manual'
+                    or option.value == 'price-ascending'
+                    or option.value == 'price-descending'
+                  %}
+                    <li>
+                      <form action="?sort_by={{ option.value }}" method="GET">
+                        <input type="hidden" name="sort_by" value="{{ option.value }}">
+                        <button type="submit" class="text_primary {% if option.value == sort_by %}underline{% endif %}">
+                          {{ option.name | escape }}
+                        </button>
+                      </form>
+                    </li>
+                  {% endif %}
                 {%- endfor -%}
               </ul>
             </div>
@@ -270,18 +264,22 @@
       {%- else -%}
         <div class="collection page-width">
           <div class="loading-overlay gradient"></div>
-          <ul
-            id="product-grid"
-            data-id="{{ section.id }}"
-            class="colection_list"
-          >
-            {%- for product in collection.products -%}
-              <li>
-                {% render 'card-product-new', card_product: product %}
-              </li>
-            {%- endfor -%}
-          </ul>
+          <div id="collections_wrapper">
+            <ul
+              id="product-grid"
+              data-id="{{ section.id }}"
+              data-next-url="{{ paginate.next.url }}"
+              class="colection_list"
+            >
+              {%- for product in collection.products -%}
+                <li>
+                  {% render 'card-product-new', card_product: product %}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
           <button
+            id="show-more-products"
             class="
               button_primary
               show_all
@@ -300,6 +298,7 @@
 
 <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'colection-filters.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'show-more-button.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {

@@ -206,6 +206,12 @@ ul {
   row-gap: 28px;
 }
 
+#collections_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
 .category_navigation .show_all {
   width: fit-content;
   padding: 12px 40px;
@@ -270,6 +276,9 @@ ul {
   .colection_list {
     column-gap: 40px;
     row-gap: 34px;
+  }
+  #collections_wrapper {
+    gap: 34px;
   }
 }
 
@@ -353,6 +362,10 @@ ul {
   .colection_list {
     column-gap: 60px;
     row-gap: 54px;
+  }
+
+  #collections_wrapper {
+    gap: 54px;
   }
 }
 
