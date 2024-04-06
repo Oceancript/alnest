@@ -8,7 +8,7 @@
 
 .checkbox_filters::before {
   content: attr(data-label) " ";
-  display: inherit;
+  display: block;
   padding: 10px 0px;
   background-color: transparent;
   color: #000000;
