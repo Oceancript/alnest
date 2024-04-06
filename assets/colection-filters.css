@@ -158,7 +158,7 @@ ul {
 }
 
 .filter_collapse .size_filter_list .colspan_2::before {
-  padding: 0;
+  /* padding: 0; */
   height: auto;
   flex: 1;
   display: flex;

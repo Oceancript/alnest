@@ -4,6 +4,7 @@
   font-weight: 400;
   appearance: none;
   display: block;
+  height: 100%;
 }
 
 .checkbox_filters::before {
