@@ -1,3 +1,7 @@
+*{
+  line-height: 100%;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -31,3 +35,5 @@ input{
   opacity: 0.6;
   transition: all 0.5s ease;
 }
+
+/* @media */
