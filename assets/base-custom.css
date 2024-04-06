@@ -1,4 +1,4 @@
-*{
+* {
   line-height: 100%;
 }
 
@@ -10,8 +10,8 @@ button {
   color: #000000;
 }
 
-input{
-    margin: 0;
+input {
+  margin: 0;
 }
 
 .container {
@@ -37,4 +37,17 @@ input{
   transition: all 0.5s ease;
 }
 
+.header.page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .header.page-width {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
 /* @media */
