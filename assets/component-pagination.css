@@ -1,10 +1,10 @@
 .pagination-wrapper {
-  margin-top: 4rem;
+  margin-top: 24px;
 }
 
 @media screen and (min-width: 990px) {
   .pagination-wrapper {
-    margin-top: 5rem;
+    margin-top: 20px;
   }
 }
 
@@ -15,8 +15,9 @@
 }
 
 .pagination__list > li {
-  flex: 1 0 4.4rem;
-  max-width: 4.4rem;
+  flex: 1 0 3.4rem;
+  max-width: 3.4rem;
+  font-size: 14px;
 }
 
 .pagination__list > li:not(:last-child) {
@@ -49,9 +50,9 @@ a.pagination__item:hover::after {
 
 .pagination__item--current::after,
 .pagination__item:hover::after {
-  content: '';
+  content: "";
   display: block;
-  width: 2rem;
+  width: 1.3rem;
   position: absolute;
   bottom: 8px;
   left: 50%;

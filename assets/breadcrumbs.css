@@ -1,19 +1,19 @@
-.breadcrumbs {
+.breadcrumbs .breadcrumbs__list {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.breadcrumbs li {
+.breadcrumbs .breadcrumbs__list li {
   color: #a9a9a9;
   font-size: 10px;
   font-weight: 400;
 }
 
-.breadcrumbs li a {
+.breadcrumbs .breadcrumbs__list li a {
   color: #a9a9a9;
   text-decoration: none;
 }
-.breadcrumbs li a.active {
+.breadcrumbs .breadcrumbs__list li a.active {
   color: #000000;
 }
