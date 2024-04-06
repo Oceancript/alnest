@@ -20,16 +20,11 @@ async function toggleFilters() {
 
 async function toggleSorting() {
   const isFiltersOpen = filterCollapse.classList.contains('active')
+  sortingButton.classList.remove('active')
   if (isFiltersOpen) {
     filterCollapse.classList.add('no_animate')
     filterCollapse.classList.remove('active')
-    sortingButton.classList.remove('active')
   }
-
-  if (isSortingOpen) {
-    sortingCollapse.classList.remove('active')
-  }
-
   await setTimeout(() => {
     filterCollapse.classList.remove('no_animate')
     sortingCollapse.classList.toggle('active')
