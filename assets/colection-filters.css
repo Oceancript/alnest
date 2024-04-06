@@ -154,6 +154,7 @@ ul {
   align-self: stretch;
   vertical-align: middle;
   display: flex;
+  flex-direction: column;
 }
 
 .filter_collapse .size_filter_list .colspan_2::before {
