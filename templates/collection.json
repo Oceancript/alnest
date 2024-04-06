@@ -35,20 +35,16 @@
       "block_order": [
         "ez_add_breadcrumbs_app_block_K4d8DV"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
-      }
-    },
-    "category_navigation_AqzTW9": {
-      "type": "category-navigation",
-      "settings": {
       }
     },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
       "settings": {
-        "show_collection_description": false,
+        "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
@@ -66,19 +62,24 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "enable_filtering": false,
+        "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "colection_filters_nCkjaM": {
+      "type": "colection-filters",
+      "settings": {
+      }
     }
   },
   "order": [
     "171217606573fc2740",
-    "category_navigation_AqzTW9",
     "banner",
-    "product-grid"
+    "product-grid",
+    "colection_filters_nCkjaM"
   ]
 }
