@@ -33,3 +33,30 @@ async function toggleSorting() {
         sortingButton.classList.toggle('active')
     }, 1)
 }
+
+
+// visibility button clear filters
+document.addEventListener('DOMContentLoaded', function () {
+  var clearFiltersButton = document.getElementById('clearFiltersButton');
+  function updateClearFiltersButton() {
+    var hasActiveFilters = false;
+    var filterCheckboxes = document.querySelectorAll('.checkbox_filters');
+    filterCheckboxes.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        hasActiveFilters = true;
+      }
+    });
+    if (hasActiveFilters) {
+      clearFiltersButton.style.display = 'block';
+    } else {
+      clearFiltersButton.style.display = 'none';
+    }
+  }
+
+  var filterCheckboxes = document.querySelectorAll('.checkbox_filters');
+  filterCheckboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', updateClearFiltersButton);
+  });
+  updateClearFiltersButton();
+});
+//end
