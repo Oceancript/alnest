@@ -1,0 +1,25 @@
+{% comment %}
+  Accepts:
+  - options: {Object} Options Liquid object (optional)
+  - option_label: {String} Label for the option (e.g., "option1", "option2", etc.)
+  - name: name string
+{% endcomment %}
+
+{{ 'select.css' | asset_url | stylesheet_tag }}
+
+<div class="__select" data-state="">
+  <div class="__select__title" data-default="">Не вибрано</div>
+  <div id="option" class="__select__content">
+    {% for option in options %}
+      <input
+        id="singleSelect{{ forloop.index0 }}"
+        class="__select__input"
+        type="radio"
+        name="{{ name }}"
+      >
+      <label for="singleSelect{{ forloop.index0 }}" class="__select__label">{{ option[option_label] }}</label>
+    {% endfor %}
+  </div>
+</div>
+
+<script src="{{ 'select.js' | asset_url }}" defer="defer"></script>

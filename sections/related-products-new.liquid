@@ -1,0 +1,65 @@
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'section-related-products.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.image_shape == 'blob' %}
+  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden">
+  <product-recommendations
+    class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
+  >
+    {% if recommendations.performed and recommendations.products_count > 0 %}
+      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
+        {{ section.settings.heading }}
+      </h2>
+      <ul
+        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+        role="list"
+      >
+        {% for recommendation in recommendations.products %}
+          <li class="grid__item">
+            {% render 'card-product-new', card_product: recommendation %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </product-recommendations>
+  {% if section.settings.image_shape == 'arch' %}
+    {% render 'mask-arch' %}
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Related products new",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Related products new"
+    }
+  ]
+}
+{% endschema %}

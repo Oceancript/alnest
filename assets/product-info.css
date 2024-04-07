@@ -5,7 +5,6 @@
 }
 
 body {
-  font-family: Inter;
   font-weight: 400;
   color: #000;
 }
@@ -22,39 +21,9 @@ body {
   gap: 20px;
 }
 
-.catalogue-card {
+.product_container {
   margin-top: 38px;
-  margin-left: 30px;
-  margin-right: 30px;
 }
-
-/* .catalogue-card_photos {
-  display: flex;
-  gap: 25px;
-  width: 907px;
-  height: 1016px;
-  margin-left: 140px;
-  margin-top: 38px;
-  margin-right: 221px;
-}
-
-.catalogue-card-photos_small {
-  display: flex;
-  gap: 25px;
-  flex-direction: column;
-}
-
-.catalogue-card_small-photo {
-  width: 222px;
-  height: 322px;
-}
-
-.catalogue-card_main-photo {
-  height: 1016px;
-  width: 660px;
-} */
-
-
 .product-card {
   position: relative;
   display: flex;
@@ -121,12 +90,11 @@ body {
 } */
 
 .mySwiper .swiper-slide img {
-  max-height: 322px;
   width: 100%;
   max-width: 222px;
+  height: 100%;
   object-fit: cover;
 }
-
 
 .mySwiper .swiper-wrapper {
   width: 100%;
@@ -139,17 +107,16 @@ body {
 }
 
 .mySwiper2 .swiper-slide img {
-  max-height: 1016px;
+  height: 100%;
   width: 100%;
   max-width: 660px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #FFF;
+  color: #fff;
 }
-
 
 .catalogue-card_description {
   max-width: 512px;
@@ -164,14 +131,29 @@ body {
   color: #000;
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: #000;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-.add-to-favorite:hover {
+.catalogue-card_description .catalogue-card-description_name .add-to-favorite {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  padding: 0;
+}
+
+.catalogue-card_description .catalogue-card-description_name .add-to-favorite svg {
+  width: 100%;
+  height: 100%;
+  stroke: #a9a9a9;
+  fill: transparent;
+}
+.catalogue-card_description .catalogue-card-description_name .add-to-favorite.iwishAdded svg {
+  fill: #a9a9a9;
+}
+.catalogue-card_description .catalogue-card-description_name .add-to-favorite:hover {
   cursor: pointer;
 }
 
@@ -182,21 +164,24 @@ body {
   justify-content: space-between;
 }
 
-.catalogue-card-description_price .full-price,
-.catalogue-card-description_price .sale-price {
+.catalogue-card-description_price .price__container .price-item {
   color: #000;
   font-size: 24px;
   font-weight: 600;
 }
 
-.catalogue-card-description_price .full-price {
+.catalogue-card-description_price
+  .price__container
+  .price__sale
+  .price-item--regular {
+  color: #a9a9a9;
   text-decoration: line-through;
-  color: #A9A9A9;
   margin-right: 16px;
 }
 
+
 .catalogue-card-description_price .article {
-  color: #A9A9A9;
+  color: #a9a9a9;
   text-align: right;
   font-size: 12px;
 }
@@ -217,11 +202,9 @@ body {
   justify-content: space-between;
 } */
 
-
 .catalogue-card-description_order-form button {
   width: 100%;
   height: 43px;
-  font-family: Inter;
   margin-top: 30px;
   display: inline-flex;
   padding: 12px;
@@ -229,17 +212,15 @@ body {
   align-items: center;
   gap: 10px;
   background: #000;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  border: none;
 }
 
 .catalogue-card-description_order-form button:hover {
   cursor: pointer;
 }
-
 
 .recomendate-supplies-section {
   margin-top: 126px;
@@ -287,7 +268,7 @@ body {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  background: #FFF;
+  background: #fff;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -333,24 +314,18 @@ body {
 }
 
 .favorite-card-price-full {
-  color: #A9A9A9;
+  color: #a9a9a9;
   text-decoration: line-through;
 }
 
-
-@media screen and (max-width:1490px) {
+@media screen and (max-width: 1490px) {
   .product-card {
     max-width: 800px;
     max-height: 800px;
   }
 }
 
-/* .swiper-wrapper {
-    max-height: 800px;
-  }
-}*/
-
-@media screen and (max-width:1310px) {
+@media screen and (max-width: 1310px) {
   .product-card {
     max-width: 600px;
     max-height: 600px;
@@ -361,7 +336,10 @@ body {
   }
 }
 
-@media screen and (max-width:1150px) {
+@media screen and (max-width: 1150px) {
+  .product_container {
+    margin-top: 24px;
+  }
   .product-card {
     max-width: 500px;
     max-height: 500px;
@@ -372,14 +350,14 @@ body {
   }
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
   .product-card {
     max-width: 400px;
     max-height: 400px;
   }
 }
 
-@media screen and (max-width:811px) {
+@media screen and (max-width: 811px) {
   .container {
     width: 100%;
     max-width: 770px;
@@ -404,7 +382,6 @@ body {
     order: 2;
   } */
 
-
   .mySwiper {
     width: 100%;
     max-width: 470px;
@@ -428,9 +405,9 @@ body {
   .mySwiper .swiper-slide img {
     max-width: 200px;
     height: 100%;
+
     object-fit: cover;
   }
-
 
   .mySwiper .swiper-slide,
   .mySwiper2 .swiper-slide {
@@ -470,13 +447,13 @@ body {
   }
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width: 660px) {
   .product-card {
     max-height: 600px;
   }
 }
 
-@media screen and (max-width:615px) {
+@media screen and (max-width: 615px) {
   .product-card {
     max-height: 900px;
   }
@@ -522,7 +499,6 @@ body {
   .mySwiper .swiper-slide img {
     max-width: 200px;
     height: 100%;
-    max-height: 200px;
     object-fit: cover;
   }
 
@@ -539,7 +515,7 @@ body {
   .button-prev path,
   .button-next path {
     stroke-width: 1px;
-    stroke: #A9A9A9;
+    stroke: #a9a9a9;
   }
 
   .button-prev {
@@ -570,7 +546,6 @@ body {
     max-width: 340px;
   }
 }
-
 
 @media screen and (max-width: 431px) {
   .container {
@@ -636,12 +611,11 @@ body {
     margin-top: 20px;
   }
 
-  .catalogue-card-description_price .full-price,
-  .catalogue-card-description_price .sale-price {
+  .catalogue-card-description_price .price__container .price-item {
     font-size: 20px;
   }
 
-  .catalogue-card-description_price .full-price {
+  .catalogue-card-description_price .price__sale .price-item--sale {
     margin-right: 33px;
   }
 
@@ -652,7 +626,6 @@ body {
   .catalogue-card-description_order-form {
     margin-top: 43px;
   }
-
 
   .catalogue-card-description_order-form button {
     margin-top: 30px;
@@ -708,4 +681,10 @@ body {
     width: 28px;
     height: 28px;
   }*/
+}
+
+@media screen and (min-width: 811px) {
+  .product-info {
+    margin-top: 34px;
+  }
 }

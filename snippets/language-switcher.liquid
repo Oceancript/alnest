@@ -2,80 +2,89 @@
   {%- form 'localization', id: 'localization_form_tag', class: 'lang-switcher-form' -%}
     <div class="localization-form__buttons">
       {% for language in localization.available_languages %}
-        <button id="locale_item_{{ language.iso_code }}" class="localization-button link" lang="{{ language.iso_code }}">
-  {% if language.iso_code == 'uk' %}
-    {{ 'ua' | capitalize }}
-  {% else %}
-    {{ language.iso_code | capitalize }}
-  {% endif %}
-</button>
+        <button
+          id="locale_item_{{ language.iso_code }}"
+          class="localization-button link"
+          lang="{{ language.iso_code }}"
+        >
+          {% if language.iso_code == 'uk' %}
+            {{ 'ua' | capitalize }}
+          {% else %}
+            {{ language.iso_code | capitalize }}
+          {% endif %}
+        </button>
       {% endfor %}
     </div>
-    <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}" />
+    <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
   {%- endform -%}
 {% endif %}
 
 <style>
-  .lang-switcher-form{
+  .lang-switcher-form {
     display: none;
   }
-  
-  .localization-button{
+
+  .localization-button {
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
     font-size: 14px;
   }
 
-    .localization-button +  .localization-button:before{
-        content: "";
-        position: absolute;
-        left: 0;
-      top: 0;
-      width: 1px;
-      height: 100%;
-      background: #000000; 
-    }
-  
+  .localization-button + .localization-button:before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+
+    background: #000000;
+  }
+
   .localization-button.active {
     color: #ccc;
   }
 
+  .localization-form__buttons {
+    display: flex;
+    gap: 14px;
+  }
+
   @media screen and (min-width: 990px) {
-    .lang-switcher-form{
-        display: flex;
+    .lang-switcher-form {
+      display: flex;
     }
   }
-  
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', function () {
     var selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
-      selectedLanguage = "{{ localization.language.iso_code }}"; 
+      selectedLanguage = '{{ localization.language.iso_code }}';
       localStorage.setItem('selectedLanguage', selectedLanguage);
     }
 
-    var defaultButton = document.getElementById("locale_item_" + selectedLanguage);
+    var defaultButton = document.getElementById('locale_item_' + selectedLanguage);
     if (defaultButton) {
-      defaultButton.classList.add("active");
+      defaultButton.classList.add('active');
     }
 
-    document.querySelectorAll(".localization-button").forEach(item => {
-      item.addEventListener("click", event => {
-        document.querySelectorAll(".localization-button").forEach(button => {
-          button.classList.remove("active");
+    document.querySelectorAll('.localization-button').forEach((item) => {
+      item.addEventListener('click', (event) => {
+        document.querySelectorAll('.localization-button').forEach((button) => {
+          button.classList.remove('active');
         });
-        item.classList.add("active");
-        var langCode = item.getAttribute("lang");
+        item.classList.add('active');
+        var langCode = item.getAttribute('lang');
         localStorage.setItem('selectedLanguage', langCode);
         var localeCodeField = document.querySelector("#localization_form_tag input[name='locale_code']");
         if (localeCodeField) {
           localeCodeField.value = langCode;
-          document.getElementById("localization_form_tag").submit();
+          document.getElementById('localization_form_tag').submit();
         } else {
-          console.error("Поле формы не найдено");
+          console.error('Поле формы не найдено');
         }
       });
     });

@@ -1,43 +1,23 @@
 {{ 'accordion.css' | asset_url | stylesheet_tag -}}
 {{ 'product-info.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-<section class="catalogue-card">
-  <div class="container">
-    <div class="flex-container">
+<section class="product-info">
+  <div class="page-width">
+    {% render 'breadcrumbs' %}
+    <div class="product_container flex-container">
       <div class="product-card">
         <div class="swiper-with-buttons">
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                  alt=""
-                >
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                  alt=""
-                >
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                  alt=""
-                >
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                  alt=""
-                >
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                  alt=""
-                >
-              </div>
+              {% for image in product.images %}
+                <div class="swiper-slide">
+                  <img
+                    src="{{ image.src | img_url: 'master' }}"
+                    alt="{{ image.alt }}"
+                  >
+                </div>
+              {% endfor %}
             </div>
           </div>
           <svg
@@ -73,112 +53,63 @@
         </div>
         <div thumbSlider="" class="swiper mySwiper2">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                alt=""
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                alt=""
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                alt=""
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                alt=""
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0590/5291/6814/files/2024-03-04_16.58.41.png?v=1709565683&width=823"
-                alt=""
-              >
-            </div>
+            {% for image in product.images %}
+              <div class="swiper-slide">
+                <img
+                  src="{{ image.src | img_url: 'master' }}"
+                  alt="{{ image.alt }}"
+                >
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
 
       <div class="catalogue-card_description">
+        {%- assign product_form_id = 'product-form-' | append: section.id -%}
         <div class="catalogue-card-description_name">
-          <h2>Светр в'язаний вовняний Soft cloud</h2>
-          <svg
-            class="add-to-favorite"
-            viewBox="0 0 22 20"
-            fill="none"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
+          <h2>{{ product.title }}</h2>
+          <a
+            href="#"
+            class="iWishAddColl  add-to-favorite "
+            data-product="{{ product.id }}"
+            data-variant="{{ product.selected_or_first_available_variant.id }}"
           >
-            <path d="M11.62 18.81C11.28 18.93 10.72 18.93 10.38 18.81C7.48 17.82 1 13.69 1 6.68998C1 3.59998 3.49 1.09998 6.56 1.09998C8.38 1.09998 9.99 1.97998 11 3.33998C11.5138 2.64585 12.183 2.0817 12.954 1.69272C13.725 1.30374 14.5764 1.10074 15.44 1.09998C18.51 1.09998 21 3.59998 21 6.68998C21 13.69 14.52 17.82 11.62 18.81Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+            <svg
+              viewBox="0 0 22 20"
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M11.62 18.81C11.28 18.93 10.72 18.93 10.38 18.81C7.48 17.82 1 13.69 1 6.68998C1 3.59998 3.49 1.09998 6.56 1.09998C8.38 1.09998 9.99 1.97998 11 3.33998C11.5138 2.64585 12.183 2.0817 12.954 1.69272C13.725 1.30374 14.5764 1.10074 15.44 1.09998C18.51 1.09998 21 3.59998 21 6.68998C21 13.69 14.52 17.82 11.62 18.81Z" />
+            </svg>
+          </a>
         </div>
         <div class="catalogue-card-description_price">
           <div>
-            <span class="full-price">4 000 &#8372;</span>
-            <span class="sale-price">3 400 &#8372;</span>
+            {%- render 'price', product: product, use_variant: true, price_class: 'price--large' -%}
           </div>
-          <span class="article">ALN0187</span>
+          <span class="article">{{ product.id }}</span>
         </div>
         <div class="catalogue-card-description_order-form">
           <div class="choose-color-and-size">
-            <div class="__select" data-state="">
-              <div class="__select__title" data-default="Бежевий">Бежевий</div>
-              <div id="option" class="__select__content">
-                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked>
-                <label for="singleSelect0" class="__select__label">Бежевий</label>
-                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect1" class="__select__label">Чорний</label>
-                <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect2" class="__select__label">Червоний</label>
-                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect3" class="__select__label">Сірий</label>
-                <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect4" class="__select__label">Фіолетовий</label>
-              </div>
-            </div>
+            {% render 'select', options: product.variants, option_label: 'option2', name: 'Color' %}
 
-            <div class="__select" data-state="">
-              <div class="__select__title" data-default="S">S</div>
-              <div class="__select__content">
-                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect0" class="__select__label">XS</label>
-                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" checked>
-                <label for="singleSelect1" class="__select__label">S</label>
-                <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect2" class="__select__label">M</label>
-                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect3" class="__select__label">L</label>
-                <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
-                <label for="singleSelect4" class="__select__label">XL</label>
-              </div>
-            </div>
+            {% render 'select', options: product.variants, option_label: 'option1', name: 'Size' %}
           </div>
-          <button type="submit">Додати до кошика</button>
+          {% comment %} <button class="button_primary">Додати до кошика</button> {% endcomment %}
+
+          {%- render 'buy-buttons',
+            product: product,
+            product_form_id: product_form_id,
+            section_id: section.id
+          -%}
         </div>
 
         <div class="catalogue_supplies-description">
           <button class="accordion">Опис</button>
           <div class="panel">
             <p>
-              Комбінезон вільного крою з довгим рукавом з фланелевої тканини. Шнурок, що затягується на талії дозволяє
-              регулювати фіксацію, надаючи повний контроль над посадкою. За бажанням штани можна носити у повній довжині
-              або підкотити, щоб створити більш вільний образ. Гудзики та блискавка допомагають зручно та легко вдягати
-              та знімати комбінезон, даруючи максимальний комфорт у використанні.<br>
-              Цей комбінезон - універсальний вибір для будь-якого дня та нагоди, радимо поєднувати його з черевиками на
-              грубій підошві чи ботільйонами на підборах, залежно від настрою.
-            </p>
-            <p>
-              На моделі розмір S. <br>
-              Параметри моделі: <br>
-              Зріст 177 см, Бюст 78 см, Талія 61 см, Бедра 91 см
+              {{ product.description }}
             </p>
           </div>
 
@@ -202,12 +133,12 @@
         </div>
       </div>
     </div>
+    
   </div>
 </section>
-
-  <script src="{{ 'accordion.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-info-new.js' | asset_url }}" defer="defer"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
+<script src="{{ 'accordion.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-info-new.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {

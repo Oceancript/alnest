@@ -1,3 +1,10 @@
+p,
+ul {
+  margin: 0px;
+  list-style: none;
+  padding: 0;
+}
+
 .catalogue_supplies-description {
   margin-top: 73px;
   /* padding-top: 12px; */
@@ -18,20 +25,19 @@
   transition: 0.4s;
 }
 
-
 /* .active,
 .accordion:hover {
   background-color: #ccc;
 } */
 
 .accordion:after {
-  content: url('../images/arrow-b.svg');
+  content: url("./arrow-b.svg");
   display: block;
   float: right;
 }
 
-.active:after {
-  content: url('../images/arrow-b.svg');
+.accordion.active:after {
+  content: url("./arrow-b.svg");
   transform: rotate(180deg);
 }
 

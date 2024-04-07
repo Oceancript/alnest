@@ -5,17 +5,8 @@
   height: 35px;
 }
 
-/* .__select[data-state="active"] .__select__title::before {
-  transform: translate(-3px, -50%) rotate(-45deg);
-}*/
-
-/* .__select[data-state="active"] .__select__title::before {
-  content: url('../images/arrow-r.svg');
-  transform: rotate(180deg);
-} */
-
 .__select[data-state="active"] .__select__title::after {
-  content: url('../images/arrow-r.svg');
+  content: url('./arrow-r.svg');
   transform: rotate(180deg);
 }
 
@@ -44,7 +35,7 @@
 }
 
 .__select__title::after {
-  content: url('../images/arrow-r.svg');
+  content: url('./arrow-r.svg');
   display: block;
   /* transition: all 0.3s ease-out; */
   /* background-color: #333; */
@@ -126,7 +117,7 @@
 .__select__label[checked]::after {
   content: '';
   display: block;
-  background: url('../images/arrow-r.svg');
+  background: url('./arrow-r.svg');
   height: 10px;
   width: 10px;
 }

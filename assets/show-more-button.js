@@ -3,6 +3,7 @@ const productsOnPage = document.getElementById('product-grid');
 let nextUrl = productsOnPage.getAttribute('data-next-url');
 const buttonShowMore = document.getElementById('show-more-products');
 buttonShowMore.addEventListener('click', (e) => {
+    console.log(nextUrl);
     fetch(nextUrl)
         .then((res) => res.text())
         .then((html) => {
@@ -12,6 +13,9 @@ buttonShowMore.addEventListener('click', (e) => {
             collectionsWrapper.append(newProductsGrid)
             let newUrl = newProductsGrid.getAttribute('data-next-url');
             nextUrl = newUrl
+            if(!nextUrl) {
+                buttonShowMore.style.display = 'none'
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
