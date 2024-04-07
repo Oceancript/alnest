@@ -1,0 +1,14 @@
+.related-products {
+  display: block;
+}
+
+.related-products__heading {
+  margin: 0 0 3rem;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .related-products__heading {
+    font-size: 16px;
+  }
+}
