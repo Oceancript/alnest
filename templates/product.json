@@ -120,10 +120,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product_info_bJwKGd": {
+      "type": "product-info",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "product_info_bJwKGd"
   ]
 }
