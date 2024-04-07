@@ -40,9 +40,6 @@
       </ul>
     {% endif %}
   </product-recommendations>
-  {% if section.settings.image_shape == 'arch' %}
-    {% render 'mask-arch' %}
-  {%- endif -%}
 </div>
 
 {% schema %}
@@ -50,7 +47,14 @@
   "name": "Related products new",
   "tag": "section",
   "class": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "You may also like",
+      "label": "t:sections.related-products.settings.heading.label"
+    }
+  ],
   "blocks": [
     {
       "type": "@app"
