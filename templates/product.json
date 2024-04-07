@@ -125,11 +125,17 @@
       "type": "product-info",
       "settings": {
       }
+    },
+    "related_products_new_VT7JAi": {
+      "type": "related-products-new",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "product_info_bJwKGd"
+    "product_info_bJwKGd",
+    "related_products_new_VT7JAi"
   ]
 }
