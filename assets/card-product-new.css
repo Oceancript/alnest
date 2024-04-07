@@ -87,6 +87,7 @@ p {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  color: black;
   background: #fff;
   font-size: 10px;
   text-transform: uppercase;
