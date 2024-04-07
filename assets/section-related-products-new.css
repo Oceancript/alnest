@@ -7,8 +7,48 @@
   font-size: 14px;
 }
 
+.colection_list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 20px;
+  row-gap: 28px;
+}
+
+.related-products {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 430px) {
+  .colection_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 834px) {
+  .colection_list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .colection_list {
+    column-gap: 40px;
+    row-gap: 34px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .related-products__heading {
     font-size: 16px;
+  }
+  .related-products {
+    margin-top: 34px;
+    margin-bottom: 126px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .colection_list {
+    column-gap: 60px;
+    row-gap: 54px;
   }
 }
