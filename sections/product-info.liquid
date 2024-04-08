@@ -118,10 +118,24 @@
             </p>
           </div>
 
-          <button class="delivery accordion">Оплата, доставка та гарантія для товару</button>
+          <button class="delivery accordion">Політика доставки</button>
           <div class="panel">
             <p>
-              {{ section.settings.payment_delivery }}
+              {{ section.settings.delivery }}
+            </p>
+          </div>
+
+          <button class="delivery accordion">Повернення товару</button>
+          <div class="panel">
+            <p>
+              {{ section.settings.return_of_goods }}
+            </p>
+          </div>
+
+          <button class="delivery accordion">Способи оплати</button>
+          <div class="panel">
+            <p>
+              {{ section.settings.payment_methods }}
             </p>
           </div>
         </div>
@@ -141,9 +155,21 @@
   "settings": [
     {
       "type": "inline_richtext",
-      "id": "payment_delivery",
+      "id": "delivery",
       "default": "Lorem",
-      "label": "Payment, delivery and warranty for the goods"
+      "label": "Delivery policy"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "return_of_goods",
+      "default": "Lorem",
+      "label": "Return of goods"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "payment_methods",
+      "default": "Lorem",
+      "label": "Payment methods"
     }
   ],
   "blocks": [
