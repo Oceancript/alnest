@@ -37,7 +37,13 @@
           <div class="favorite-card-collection">sold out</div>
         {%- endif -%}
         {%- for tags in card_product.tags -%}
-          <div class="favorite-card-collection">{{ tags }}</div>
+          {%- if tags == 'SALE' -%}
+            <div class="favorite-card-collection">{{ tags }}</div>
+          {%- endif -%}
+
+          {%- if tags == 'NEW' -%}
+            <div class="favorite-card-collection">{{ tags }}</div>
+          {%- endif -%}
         {%- endfor -%}
       </div>
     </div>
