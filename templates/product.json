@@ -123,13 +123,29 @@
     },
     "product_info_bJwKGd": {
       "type": "product-info",
+      "blocks": {
+        "variant_picker_QHERXh": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_QHERXh"
+      ],
       "settings": {
+        "delivery": "Lorem",
+        "return_of_goods": "Lorem",
+        "payment_methods": "Lorem"
       }
     },
     "related_products_new_VT7JAi": {
       "type": "related-products-new",
       "settings": {
-        "heading": "Вам може сподобатися"
+        "heading": "Вам може сподобатися",
+        "products_to_show": 4
       }
     }
   },
