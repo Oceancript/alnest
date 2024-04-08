@@ -31,7 +31,7 @@
               id="sorting_button"
               class="sorting_button hover_opacity uppercase"
             >
-              <span>{{ 'general.sort_title' | t }}</span>
+              <span>{{ section.settings.sorting_label }}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 15 15"
@@ -47,7 +47,7 @@
               id="filters_button"
               class="filters_button hover_opacity uppercase"
             >
-              <span> {{ 'general.filters' | t }}</span>
+              <span>{{ section.settings.filter_label }}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 18 18"
@@ -310,7 +310,7 @@
       "type": "inline_richtext",
       "id": "sorting_label",
       "default": "Sorting",
-      "label": "schemaorting label"
+      "label": "Sorting label"
     },
     {
       "type": "inline_richtext",
