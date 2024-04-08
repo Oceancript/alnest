@@ -98,11 +98,7 @@
           </div>
           {% comment %} <button class="button_primary">Додати до кошика</button> {% endcomment %}
 
-          {%- render 'buy-buttons',
-            product: product,
-            product_form_id: product_form_id,
-            section_id: section.id
-          -%}
+          {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
         </div>
 
         <div class="catalogue_supplies-description">
@@ -133,7 +129,6 @@
         </div>
       </div>
     </div>
-    
   </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
@@ -146,7 +141,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
-    
+    {
+      "type": "inline_richtext",
+      "id": "payment_delivery",
+      "default": "",
+      "label": "Payment, delivery and warranty for the goods"
+    }
   ],
   "blocks": [
     {

@@ -5,7 +5,7 @@
       "general": {
         "filters": "Фільтри",
         "sort_title": "Сортувати",
-          "view_more": "Показати ще",
+        "view_more": "Показати ще",
         "autocomplete_zero_item": "Немає доступних товарів",
         "autocomplete_powered_by_google": "Завдяки {{brandName}}",
         "submit": "Надіслати",
