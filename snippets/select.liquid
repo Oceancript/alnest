@@ -9,30 +9,33 @@
 
 {{ 'select.css' | asset_url | stylesheet_tag }}
 
-{% assign option_keys = ['option1', 'option2', 'option3', 'option4', 'option5', 'option6', 'option7', 'option8'] %}
+{% assign option_keys = 'option1,option2,option3,option4,option5,option6,option7,option8' | split: ',' %}
 
 {% for key in option_keys %}
-  <div class="__select" data-state="">
-    <div class="__select__title" data-default="">{{ product.selected_or_first_available_variant[key] }}</div>
-    <div id="option" class="__select__content">
-      {% for option in options %}
-        <input
-          id="singleSelect{{ forloop.index0 }}"
-          class="__select__input"
-          value="{{ option.id }}"
-          type="radio"
-          name="{{ name }}"
-        >
-        <label
-          data-value="{{ option.id }}"
-          data-url="{{ option.url }}"
-          for="singleSelect{{ forloop.index0 }}"
-          class="__select__label"
-        >
-          {{- option[key] -}}
-          {{ option.sku }}
-        </label>
-      {% endfor %}
+  {% if options[0][key] != null %}
+    <div class="__select" data-state="">
+      <div class="default_variant  __select__title" data-default="">
+        {{ product.selected_or_first_available_variant[key] }}
+      </div>
+      <div id="option" class="__select__content">
+        {% for option in options %}
+          <input
+            id="singleSelect{{ forloop.index0 }}"
+            class="__select__input"
+            value="{{ option.id }}"
+            type="radio"
+            name="{{ name }}"
+          >
+          <label
+            data-value="{{ option.id }}"
+            data-url="{{ option.url }}"
+            for="singleSelect{{ forloop.index0 }}"
+            class="__select__label"
+          >
+            {{- option[key] -}}
+          </label>
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  {%- endif %}
 {% endfor %}

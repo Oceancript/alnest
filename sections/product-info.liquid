@@ -90,25 +90,15 @@
           </div>
           <span class="article">{{ product.id }}</span>
         </div>
-        <div>
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-            {%- endcase -%}
-          {%- endfor -%}
-        </div>
 
-        <div class="catalogue-card-description_order-form">
+        <div id="check_variant" class="catalogue-card-description_order-form">
           <div class="choose-color-and-size">
             {% render 'select', options: product.variants, option_label: 'option2', name: 'Color', default: 'Колір' %}
 
             {% comment %} {% render 'select', options: product.variants, option_label: 'option1', name: 'Size', default: 'Розмір' %} {% endcomment %}
           </div>
           {% comment %} <button class="button_primary">Додати до кошика</button> {% endcomment %}
-          <div id="check_variant">
-            {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
-          </div>
+          {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
         </div>
 
         <div class="catalogue_supplies-description">

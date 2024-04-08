@@ -1,4 +1,6 @@
 // Получаем все селекты на странице
+
+function render () {
 const selectSingles = document.querySelectorAll('.__select');
 
 // Добавляем обработчик события клика для всего документа
@@ -106,6 +108,30 @@ function fetchOptionUrl(url) {
       const newElement = tempElement.querySelector('#check_variant');
       const oldElement = document.querySelector('#check_variant');
       oldElement.innerHTML = newElement.innerHTML
+    
+      render();
+
     })
     .catch(error => console.error('There has been a problem with your fetch operation:', error));
 }
+
+function updateSelectContent(oldElement, newContent) {
+  // Сохраняем обработчики событий с сохраненного старого элемента
+  const clickHandler = oldElement.querySelector('.__select__title').onclick;
+
+  // Сохраняем стили
+  const oldStyles = oldElement.getAttribute('style');
+
+  // Обновляем содержимое старого элемента
+  oldElement.innerHTML = newContent;
+
+  // Восстанавливаем обработчики событий
+  const newTitleElement = oldElement.querySelector('.__select__title');
+  newTitleElement.onclick = clickHandler;
+
+  // Восстанавливаем стили
+  oldElement.setAttribute('style', oldStyles);
+}
+}
+
+render();
