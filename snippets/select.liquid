@@ -1,5 +1,6 @@
 {% comment %}
   Accepts:
+  - product
   - options: {Object} Options Liquid object (optional)
   - option_label: {String} Label for the option (e.g., "option1", "option2", etc.)
   - name: name string
@@ -8,19 +9,33 @@
 
 {{ 'select.css' | asset_url | stylesheet_tag }}
 
-<div class="__select" data-state="">
-  <div class="__select__title" data-default="">{{ default }}</div>
-  <div id="option" class="__select__content">
-    {% for option in options %}
-      <input
-        id="singleSelect{{ forloop.index0 }}"
-        class="__select__input"
-        type="radio"
-        name="{{ name }}"
-      >
-      <label for="singleSelect{{ forloop.index0 }}" class="__select__label">{{ option[option_label] }}</label>
-    {% endfor %}
-  </div>
-</div>
+{% assign option_keys = 'option1,option2,option3,option4,option5,option6,option7,option8' | split: ',' %}
 
-<script src="{{ 'select.js' | asset_url }}" defer="defer"></script>
+{% for key in option_keys %}
+  {% if options[0][key] != null %}
+    <div class="__select" data-state="">
+      <div class="default_variant  __select__title" data-default="">
+        {{ product.selected_or_first_available_variant[key] }}
+      </div>
+      <div id="option" class="__select__content">
+        {% for option in options %}
+          <input
+            id="singleSelect{{ forloop.index0 }}"
+            class="__select__input"
+            value="{{ option.id }}"
+            type="radio"
+            name="{{ name }}"
+          >
+          <label
+            data-value="{{ option.id }}"
+            data-url="{{ option.url }}"
+            for="singleSelect{{ forloop.index0 }}"
+            class="__select__label"
+          >
+            {{- option[key] -}}
+          </label>
+        {% endfor %}
+      </div>
+    </div>
+  {%- endif %}
+{% endfor %}
