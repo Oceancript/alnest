@@ -1,5 +1,6 @@
 {% comment %}
   Accepts:
+  - product
   - options: {Object} Options Liquid object (optional)
   - option_label: {String} Label for the option (e.g., "option1", "option2", etc.)
   - name: name string
@@ -8,19 +9,29 @@
 
 {{ 'select.css' | asset_url | stylesheet_tag }}
 
+{% assign option_keys = [] %}
+
+{{ option_numbers_sorted }}
 <div class="__select" data-state="">
-  <div class="__select__title" data-default="">{{ default }}</div>
+  <div class="__select__title" data-default="">{{ product.selected_or_first_available_variant[option_label] }}</div>
   <div id="option" class="__select__content">
     {% for option in options %}
       <input
         id="singleSelect{{ forloop.index0 }}"
         class="__select__input"
+        value="{{ option.id }}"
         type="radio"
         name="{{ name }}"
       >
-      <label for="singleSelect{{ forloop.index0 }}" class="__select__label">{{ option[option_label] }}</label>
+      <label
+        data-value="{{ option.id }}"
+        data-url="{{ option.url }}"
+        for="singleSelect{{ forloop.index0 }}"
+        class="__select__label"
+      >
+        {{- option[option_label] -}}
+        {{ option.sku }}
+      </label>
     {% endfor %}
   </div>
 </div>
-
-<script src="{{ 'select.js' | asset_url }}" defer="defer"></script>

@@ -101,13 +101,14 @@
 
         <div class="catalogue-card-description_order-form">
           <div class="choose-color-and-size">
-            {% render 'select', options: product.variants, option_label: 'option2', name: 'Color' %}
+            {% render 'select', options: product.variants, option_label: 'option2', name: 'Color', default: 'Колір' %}
 
-            {% render 'select', options: product.variants, option_label: 'option1', name: 'Size' %}
+            {% comment %} {% render 'select', options: product.variants, option_label: 'option1', name: 'Size', default: 'Розмір' %} {% endcomment %}
           </div>
           {% comment %} <button class="button_primary">Додати до кошика</button> {% endcomment %}
-
-          {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
+          <div id="check_variant">
+            {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
+          </div>
         </div>
 
         <div class="catalogue_supplies-description">
@@ -200,6 +201,9 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
 <script src="{{ 'accordion.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-info-new.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'select.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {
