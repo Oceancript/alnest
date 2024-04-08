@@ -30,6 +30,7 @@
     "header": {
       "type": "header",
       "custom_css": [
+        ".list-menu__item {color: #000000; font-weight: 400; }",
         "@media screen and (max-width: 989px) {.header--mobile-left {grid-template-columns: auto 1fr 2fr; }}"
       ],
       "settings": {
