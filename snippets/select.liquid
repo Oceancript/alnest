@@ -3,12 +3,13 @@
   - options: {Object} Options Liquid object (optional)
   - option_label: {String} Label for the option (e.g., "option1", "option2", etc.)
   - name: name string
+  - default: string
 {% endcomment %}
 
 {{ 'select.css' | asset_url | stylesheet_tag }}
 
 <div class="__select" data-state="">
-  <div class="__select__title" data-default="">Не вибрано</div>
+  <div class="__select__title" data-default="">{{ default }}</div>
   <div id="option" class="__select__content">
     {% for option in options %}
       <input
