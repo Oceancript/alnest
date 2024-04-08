@@ -186,9 +186,9 @@ body {
 }
 
 .choose-color-and-size {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   gap: 14px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .catalogue-card-description_order-form {
