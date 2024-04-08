@@ -27,13 +27,7 @@ selectSingles.forEach((selectSingle) => {
   const urlParams = new URLSearchParams(window.location.search);
   const initialVariant = urlParams.get('variant');
 
-  // Устанавливаем значение по умолчанию, если параметр variant не найден в URL
-  if (initialVariant) {
-    select.value = initialVariant;
-  } else {
-    // Если параметр variant не найден в URL, устанавливаем значение по умолчанию
-    select.value = selectSingle.querySelector('.__select__input:checked').value;
-  }
+
 
   // Toggle menu
   selectSingle_title.addEventListener('click', () => {
