@@ -1469,7 +1469,7 @@
         },
         "reveal_more_label": {
           "one": "Показати ще %{count} розташування",
-          "other": "Показати ще %{count} місць",
+          "other": "Показати ще %{count} місць"
         }
       },
       "captcha": {
