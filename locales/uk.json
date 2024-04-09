@@ -1,5 +1,4 @@
-{ 
-
+{
   "shopify": {
     "checkout": {
       "general": {
@@ -3261,5 +3260,8 @@
   "onboarding": {
     "product_title": "Приклад назви продукту",
     "collection_title": "Назва вашої колекції"
+  },
+  "general": {
+    "view_more": "Показати більше"
   }
 }
