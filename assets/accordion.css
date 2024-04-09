@@ -11,6 +11,13 @@ ul {
   border-top: 0.5px solid #000;
 }
 
+.catalogue_supplies-description .panel .shopify-block a[rel="nofollow"] {
+  display: none;
+}
+.catalogue_supplies-description .panel .shopify-block {
+  margin-bottom: 15px;
+}
+
 .accordion {
   background-color: #fff;
   color: #000;
