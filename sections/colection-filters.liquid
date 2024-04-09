@@ -197,7 +197,7 @@
                           <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
                           <div class="additional_filter_list filter_list">
                             {%- for option in filter.values -%}
-                              {% if filter.param_name == 'Sale' %}
+                              {% if option.value == 'SALE' %}
                                 <input
                                   class="checkbox_filters"
                                   id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
@@ -210,7 +210,7 @@
                                   name="{{ option.param_name }}"
                                 >
                               {% endif %}
-                              {% if filter.param_name == 'New' %}
+                              {% if option.value == 'NEW' %}
                                 <input
                                   class="checkbox_filters"
                                   id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
