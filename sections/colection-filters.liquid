@@ -197,17 +197,32 @@
                           <p class="title_filter text_primary uppercase">{{ filter.label }}</p>
                           <div class="additional_filter_list filter_list">
                             {%- for option in filter.values -%}
-                              <input
-                                class="checkbox_filters"
-                                id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                data-label="{{ option.value }}"
-                                value="{{ option.value }}"
-                                type="checkbox"
-                                {% if option.active %}
-                                  checked
-                                {% endif %}
-                                name="{{ option.param_name }}"
-                              >
+                              {% if filter.param_name == 'Sale' %}
+                                <input
+                                  class="checkbox_filters"
+                                  id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                                  data-label="{{ option.value }}"
+                                  value="{{ option.value }}"
+                                  type="checkbox"
+                                  {% if option.active %}
+                                    checked
+                                  {% endif %}
+                                  name="{{ option.param_name }}"
+                                >
+                              {% endif %}
+                              {% if filter.param_name == 'New' %}
+                                <input
+                                  class="checkbox_filters"
+                                  id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                                  data-label="{{ option.value }}"
+                                  value="{{ option.value }}"
+                                  type="checkbox"
+                                  {% if option.active %}
+                                    checked
+                                  {% endif %}
+                                  name="{{ option.param_name }}"
+                                >
+                              {% endif %}
                             {%- endfor -%}
                           </div>
                         </div>
