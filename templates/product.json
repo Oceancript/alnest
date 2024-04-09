@@ -85,7 +85,6 @@
         "description",
         "share"
       ],
-      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -130,10 +129,19 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
+        },
+        "size_charts_size_guide_esc_app_block_mkURJt": {
+          "type": "shopify:\/\/apps\/size-charts-size-guide-esc\/blocks\/app-block\/daa9a1f8-04ef-4369-ae22-966a9c435d5f",
+          "settings": {
+            "widget_type": "inline",
+            "force_background": false,
+            "btn_text": "Size Guide"
+          }
         }
       },
       "block_order": [
-        "variant_picker_QHERXh"
+        "variant_picker_QHERXh",
+        "size_charts_size_guide_esc_app_block_mkURJt"
       ],
       "settings": {
         "delivery": "DELIVERY POLICY<br>\nWe are here to provide you with the best customer service possible. If you have any questions about shipping or would like to receive your order faster, please contact us.<br><br>DELIVERY <br> Dear customers,<br>we are launching our online store against the backdrop of the Russian invasion of Ukraine to support our business and help the Ukrainian economy during this time.<br><br>Delivery time during martial law is:<br><br>International delivery: 3-14 days (depending on distance)Ukraine: 2-5 business days<br><br>Goods subject to return or exchange.<br><br>WE DO NOT DELIVER TO RUSSIA AND BELARUS. <br><br>We will send you a tracking number in the shipping notification email as soon as your order is ready to ship. <br><br>Please note that we use external shipping services and any delays that occur on their end are the responsibility of the shipping company.<br><br>TAXES AND DUTIES<br>Import duties and taxes are not included in the price at checkout. These fees will be charged by the delivery service upon delivery. Please check with your country's customs office to determine these costs.<br><br>If you have any questions about delivery times, please contact us.",
