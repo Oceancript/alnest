@@ -72,6 +72,14 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "size_charts_size_guide_esc_app_block_7d8Y6m": {
+          "type": "shopify:\/\/apps\/size-charts-size-guide-esc\/blocks\/app-block\/daa9a1f8-04ef-4369-ae22-966a9c435d5f",
+          "settings": {
+            "widget_type": "link",
+            "force_background": false,
+            "btn_text": "Size Guide"
+          }
         }
       },
       "block_order": [
@@ -83,8 +91,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "size_charts_size_guide_esc_app_block_7d8Y6m"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
