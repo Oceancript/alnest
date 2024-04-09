@@ -3262,6 +3262,11 @@
     "collection_title": "Назва вашої колекції"
   },
   "general": {
-    "view_more": "Показати більше"
+    "view_more": "Показати більше",
+    "description": "Опис",
+    "dimensional_grid": "Розмірна сітка",
+    "delivery_policy": "Політика доставки",
+    "return_of_goods": "Повернення товару",
+    "payment_methods": "Способи оплати"
   }
 }
