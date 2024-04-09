@@ -113,7 +113,7 @@
           <div class="panel">
             {% if section.settings.blocks %}
               {% for block in section.settings.blocks %}
-                {% case block.type %}
+                {% case block.type == '@app' %}
                   {% when '@app' %}
                     {% render block %}
                 {% endcase %}
