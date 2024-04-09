@@ -3,6 +3,11 @@
     "filters": "Filters",
     "sort_title": "Sort by",
     "view_more": "Show more",
+    "description": "Description",
+    "dimensional_grid": "Dimensional grid",
+    "delivery_policy": "Delivery policy",
+    "return_of_goods": "Return of goods",
+    "payment_methods": "Payment methods",
     "password_page": {
       "login_form_heading": "Enter store using password:",
       "login_password_button": "Enter using password",

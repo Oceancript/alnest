@@ -102,14 +102,14 @@
         </div>
 
         <div class="catalogue_supplies-description">
-          <button class="accordion">Опис</button>
+          <button class="accordion"> {{ 'general.description' | t }}</button>
           <div class="panel">
             <p>
               {{ product.description }}
             </p>
           </div>
 
-          <button class="size-table accordion">Розмірна сітка</button>
+          <button class="size-table accordion">{{ 'general.description' | t }}</button>
           <div class="panel">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -118,21 +118,21 @@
             </p>
           </div>
 
-          <button class="delivery accordion">Політика доставки</button>
+          <button class="delivery accordion">{{ 'general.delivery_policy' | t }}</button>
           <div class="panel">
             <p>
               {{ section.settings.delivery }}
             </p>
           </div>
 
-          <button class="delivery accordion">Повернення товару</button>
+          <button class="delivery accordion">{{ 'general.return_of_goods' | t }}</button>
           <div class="panel">
             <p>
               {{ section.settings.return_of_goods }}
             </p>
           </div>
 
-          <button class="delivery accordion">Способи оплати</button>
+          <button class="delivery accordion">{{ 'general.payment_methods' | t }}</button>
           <div class="panel">
             <p>
               {{ section.settings.payment_methods }}
