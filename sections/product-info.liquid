@@ -102,7 +102,7 @@
         </div>
 
         <div class="catalogue_supplies-description">
-          <button class="accordion"> {{ 'general.description' | t }}</button>
+          <button class="accordion">{{ 'general.description' | t }}</button>
           <div class="panel">
             <p>
               {{ product.description }}
@@ -111,11 +111,14 @@
 
           <button class="size-table accordion">{{ 'general.dimensional_grid' | t }}</button>
           <div class="panel">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.
-            </p>
+            {% if section.settings.blocks %}
+              {% for block in section.settings.blocks %}
+                {% case block.type %}
+                  {% when '@app' %}
+                    {% render block %}
+                {% endcase %}
+              {% endfor %}
+            {% endif %}
           </div>
 
           <button class="delivery accordion">{{ 'general.delivery_policy' | t }}</button>
