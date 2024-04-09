@@ -285,7 +285,7 @@
               show_all
             "
           >
-            {{ 'general.view_more' | t }}
+            {{ section.settings.button_show_more }}
           </button>
           {%- if paginate.pages > 1 -%}
             {% render 'pagination', paginate: paginate, anchor: '' %}
@@ -317,6 +317,12 @@
       "id": "filter_label",
       "default": "Filters",
       "label": "Filter label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "button_show_more",
+      "default": "Show more",
+      "label": "Button show more"
     }
   ],
   "blocks": [
