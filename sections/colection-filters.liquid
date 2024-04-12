@@ -293,16 +293,16 @@
               {%- endfor -%}
             </ul>
           </div>
-          <button
-            id="show-more-products"
-            class="
-              button_primary
-              show_all
-            "
-          >
-            {{ 'general.view_more' | t }}
-          </button>
           {%- if paginate.pages > 1 -%}
+            <button
+              id="show-more-products"
+              class="
+                button_primary
+                show_all
+              "
+            >
+              {{ 'general.view_more' | t }}
+            </button>
             {% render 'pagination', paginate: paginate, anchor: '' %}
           {%- endif -%}
         </div>
