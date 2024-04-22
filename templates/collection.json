@@ -73,6 +73,9 @@
     "colection_filters_nCkjaM": {
       "type": "colection-filters",
       "settings": {
+        "sorting_label": "Sorting",
+        "filter_label": "Filters",
+        "filter_label_under_the_order": "Under the order"
       }
     }
   },
