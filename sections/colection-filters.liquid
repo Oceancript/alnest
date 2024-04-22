@@ -180,7 +180,7 @@
                               <input
                                 class="checkbox_filters"
                                 id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                data-label="{{ option.label }}"
+                                data-label="{% if option.value == '0' %} {{ section.settings.filter_label_under_the_order }} {% else %} {{ option.label }}  {% endif %}"
                                 value="{{ option.value }}"
                                 type="checkbox"
                                 {% if option.active %}
@@ -332,6 +332,12 @@
       "id": "filter_label",
       "default": "Filters",
       "label": "Filter label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "filter_label_under_the_order",
+      "default": "Under the order",
+      "label": "Under the order label"
     }
   ],
   "blocks": [
