@@ -198,7 +198,17 @@
         "edit_link_label": "Редагувати",
         "cart": "Корзина",
         "close_modal_label": "Закрити",
-        "close_notice_label": "Закрити"
+        "close_notice_label": "Закрити",
+        "continue_to_review": "Переглянути замовлення",
+        "back_to_cart": "Повернутись до корзини",
+        "back_to_contact_information": "Повернутись до інформації",
+        "back_to_shipping_method": "Повернутись до покупок",
+        "back_to_payment_method": "Повернутись до оплати",
+        "choose_shipping_method": "Вибрати метод оплати",
+        "choose_payment_method": "Вибрати метод оплати",
+        "choose_billing_address": "Адрес доставки",
+        "contact_us_html": "Зв'яжіться з нами для подальшого зв'язку",
+        "tooltip_accessibility_label": "Більше інформації"
       },
       "contact": {
         "title": "Інформація",
