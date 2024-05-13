@@ -119,6 +119,9 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-6fa6a953-aab2-4f0e-b215-49c9ea0491c3",
     "checkout_body_background_image": "shopify:\/\/shop_images\/IMG_0147_69e4a20b-7691-4bba-8711-3828297c1f64.jpg",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#000000",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
