@@ -25,14 +25,14 @@
             "thursday": "четвер",
             "friday": "П'ятниця",
             "saturday": "Субота",
-            "sunday": "неділя"
+            "sunday": "Неділя"
           },
           "weekdays_abbreviation": {
             "monday": "пн",
             "tuesday": "вт",
-            "wednesday": "ми",
+            "wednesday": "сер",
             "thursday": "чт",
-            "friday": "О",
+            "friday": "пт",
             "sunday": "Нд"
           },
           "months": {
