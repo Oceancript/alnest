@@ -528,14 +528,8 @@
           "disclaimer": {
             "description_transactional_html": "_"
           }
-        },
-        "accept_marketing_checkbox_label": "test2"
+        }
       }
-    }
-  },
-  "customer_accounts": {
-    "order_details": {
-      "marketing_checkbox_label": "test1"
     }
   }
 }
