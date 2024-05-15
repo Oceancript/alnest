@@ -10,8 +10,23 @@
       "blocks": {
         "text_ppenLc": {
           "settings": {
-            "subtext": "<h5>Lviv, Romanchuka 2 <\/h5><h5>Mon-Sun: 10:00-20:00<\/h5><h5>+38 067 41 40 282<\/h5><h5><\/h5><p><a href=\"https:\/\/linktr.ee\/alnest.ua\" title=\"https:\/\/linktr.ee\/alnest.ua\">SOCIAL MEDIA<\/a><\/p>",
-            "heading": "Contacts"
+            "heading": "Contacts",
+            "subtext": "<h5>Lviv, Romanchuka 2 <\/h5><h5>Mon-Sun: 10:00-20:00<\/h5><h5>+38 067 41 40 282<\/h5><h5><\/h5><p><a href=\"https:\/\/linktr.ee\/alnest.ua\" title=\"https:\/\/linktr.ee\/alnest.ua\">SOCIAL MEDIA<\/a><\/p>"
+          }
+        },
+        "link_list_JQpcVi": {
+          "settings": {
+            "heading": "CLIENT"
+          }
+        },
+        "link_list_tzWGb3": {
+          "settings": {
+            "heading": "CATALOG"
+          }
+        },
+        "link_list_hEr4Df": {
+          "settings": {
+            "heading": "COMPANY"
           }
         }
       }
