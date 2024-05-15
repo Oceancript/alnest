@@ -2104,7 +2104,8 @@
         "draft_order_payment_due_on_fulfillment": "Ваш платіж надійде після того, як ваше замовлення буде підтверджено та виконано.",
         "credit_card_label": "Кредитна карта",
         "money_order_label": "Грошовий переказ",
-        "debit_card_label": "Дебетова картка"
+        "debit_card_label": "Дебетова картка",
+        "order_deposit_due_now": "{{depositAmount}} потрібно сплатити сьогодні Залишок балансу нараховується на умовах {{translatedName}} і має бути сплачено {{dueDate}} ."
       },
       "store_credit_errors": {
         "generic_error": "Виникла проблема з кредитом вашого магазину. Повторіть спробу або оновіть сторінку."
@@ -2473,7 +2474,10 @@
         "delivered_description": "Цей вантаж доставлено.",
         "delivered_label": "Доставлено",
         "delivered_title": "Ваше відправлення доставлено",
-        "delivered_description_digital": "Ваше замовлення виконано.",
+        "delivered_description_digital": {
+          "one": "Цей елемент завершено.",
+          "other": "Ці елементи завершені."
+        },
         "delivered_description_gift_card": {
           "one": "Подарункову картку надіслали електронною поштою.",
           "other": "Подарункові карти були надіслані електронною поштою."
