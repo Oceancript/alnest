@@ -16,28 +16,28 @@
         "text_ppenLc": {
           "type": "text",
           "settings": {
-            "heading": "CONTACTS",
-            "subtext": "<h5>Lviv, 2 Romanchuka St. <\/h5><h5>Mon-Sun: 10:00-20:00<\/h5><h5>+38 067 41 40 282<\/h5><h5><\/h5><p><a href=\"https:\/\/linktr.ee\/alnest.ua\" title=\"https:\/\/linktr.ee\/alnest.ua\">SOCIAL MEDIA<\/a><\/p>"
+            "heading": "КОНТАКТИ",
+            "subtext": "<h5>Львів, вул.Романчука 2<\/h5><h5>Пон-Нед: 10:00-20:00<\/h5><h5>+38 067 41 40 282<\/h5><h5><\/h5><p><a href=\"https:\/\/linktr.ee\/alnest.ua\" title=\"https:\/\/linktr.ee\/alnest.ua\">SOCIAL MEDIA<\/a><\/p>"
           }
         },
         "link_list_tzWGb3": {
           "type": "link_list",
           "settings": {
-            "heading": "CATALOG",
+            "heading": "КАТАЛОГ",
             "menu": "footer-menu-catalog"
           }
         },
         "link_list_JQpcVi": {
           "type": "link_list",
           "settings": {
-            "heading": "CUSTOMER",
+            "heading": "КЛІЄНТУ",
             "menu": "footer-menu-client"
           }
         },
         "link_list_hEr4Df": {
           "type": "link_list",
           "settings": {
-            "heading": "COMPANY",
+            "heading": "КОМПАНІЯ",
             "menu": "footer-menu-company"
           }
         },

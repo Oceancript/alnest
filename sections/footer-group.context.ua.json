@@ -4,5 +4,17 @@
     "market": "ua"
   },
   "sections": {
+    "footer": {
+      "settings": {
+      },
+      "blocks": {
+        "text_ppenLc": {
+          "settings": {
+            "subtext": "<h5>Lviv, Romanchuka 2 <\/h5><h5>Mon-Sun: 10:00-20:00<\/h5><h5>+38 067 41 40 282<\/h5><h5><\/h5><p><a href=\"https:\/\/linktr.ee\/alnest.ua\" title=\"https:\/\/linktr.ee\/alnest.ua\">SOCIAL MEDIA<\/a><\/p>",
+            "heading": "Contacts"
+          }
+        }
+      }
+    }
   }
 }
