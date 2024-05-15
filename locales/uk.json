@@ -3878,8 +3878,8 @@
       "login_form_error": "Неправильний пароль!",
       "powered_by_shopify_html": "Цей магазин працюватиме на базі {{ shopify }}",
       "admin_link_html": "Ви власник магазину? <a href=\"\/admin\" class=\"link underlined-link\">Увійдіть тут<\/a>",
-      "login_form_password_label": "",
-      "login_form_submit": ""
+      "login_form_password_label": "Пароль",
+      "login_form_submit": "Введіть"
     },
     "cart": {
       "view": "Переглянути кошик ( {{ count }} )",
