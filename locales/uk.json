@@ -1100,7 +1100,7 @@
         "checkout_as_guest": "Вийти як гість",
         "checkout_a_different_way": "Оформити замовлення іншим способом",
         "blocks": {
-          "contact_method_title": "контакт",
+          "contact_method_title": "Контакт",
           "billing_address_title": "Виставлення рахунків",
           "shipping_address_title": "Відправити до",
           "shipping_method_title": "Метод доставки",
