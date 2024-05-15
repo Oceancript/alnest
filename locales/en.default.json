@@ -529,6 +529,43 @@
             "description_transactional_html": "_"
           }
         }
+      },
+      "general": {
+        "filters": "Filters",
+        "sort_title": "Sort",
+        "view_more": "Show more"
+      },
+      "contact": {
+        "optional_recipient_label": "Attention (optional)"
+      },
+      "shipping": {
+        "split_cart_merchandise_quantity_label_standard": "%{quantity} items",
+        "split_cart_merchandise_quantity_label_additional": "+ %{quantity} more",
+        "split_cart_merchandise_shipment_number": "Shipment %{number} from %{total}",
+        "split_cart_ships_now": "Shipping now",
+        "split_cart_ships_later": "Ships later",
+        "split_cart_ships_by_date": "Delivery by %{date}",
+        "split_cart_ships_date": "Delivery %{date}",
+        "split_cart_shipped_by_amazon_prime": "Shipped by Amazon Prime",
+        "split_cart_shipped_by_shop": "Sent by %{shop_name}",
+        "split_cart_multiple_shipment_label": "Multiple shipments",
+        "split_cart_shipping_label": "method",
+        "split_cart_multiple_shipment_quantity_label": "%{quantity} of shipments",
+        "split_cart_multiple_shipment_notice": "Your order will arrive in several shipments",
+        "merchandise_quantity_label_inline_primary": "Quantity: %{quantity}",
+        "merchandise_quantity_label_inline": "%{merchandise_title} ×%{quantity}",
+        "address2_add_label": "Add an apartment, suite, etc.",
+        "enter_address_manually_label": "Enter the address manually"
+      },
+      "thank_you": {
+        "payment_method_draft_order": "It is paid after processing the order"
+      }
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_status": {
+        "delivered_description_digital": "Your order has been completed."
       }
     }
   }
