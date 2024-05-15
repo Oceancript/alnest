@@ -3438,7 +3438,11 @@
       "note": "Замовляйте спеціальні інструкції",
       "empty": "Ваш кошик порожній",
       "headings": {
-        "image": "Зображення продукту"
+        "image": "Зображення продукту",
+        "product": "",
+        "price": "",
+        "total": "",
+        "quantity": ""
       },
       "login": {
         "title": "Є обліковий запис?",
@@ -3449,7 +3453,9 @@
       "taxes_included_but_shipping_at_checkout": "Враховано податок, доставку та знижки, які розраховуються під час оформлення замовлення",
       "taxes_and_shipping_at_checkout": "Податки, знижки та вартість доставки розраховуються під час оформлення замовлення",
       "taxes_and_shipping_policy_at_checkout_html": "Податки, знижки та <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">вартість доставки<\/a> розраховуються під час оформлення замовлення",
-      "taxes_included_and_shipping_policy_html": "З податком. <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">Доставка<\/a> та знижки розраховуються на касі."
+      "taxes_included_and_shipping_policy_html": "З податком. <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">Доставка<\/a> та знижки розраховуються на касі.",
+      "checkout": "",
+      "update": ""
     },
     "video": {
       "load_video": "Завантажити відео: {{ description }}"
@@ -3469,25 +3475,44 @@
       "variant_total": "Всього варіантів",
       "product_variants": "Варіанти продукту",
       "total_items": "Всього елементів",
-      "remove_all_items_confirmation": "Видалити всі {{ quantity }} позиції з кошика?"
+      "remove_all_items_confirmation": "Видалити всі {{ quantity }} позиції з кошика?",
+      "view_cart": "",
+      "product": "",
+      "variant": "",
+      "remove_all": "",
+      "cancel": ""
     },
     "footer": {
       "payment": "Методи оплати"
     },
     "collection_template": {
       "empty": "Продукти не знайдено",
-      "use_fewer_filters_html": "Використовуйте менше фільтрів або <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;\/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">видаліть усі<\/a>"
+      "use_fewer_filters_html": "Використовуйте менше фільтрів або <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;\/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">видаліть усі<\/a>",
+      "title": ""
     },
     "slideshow": {
       "previous_slideshow": "Попередній слайд",
       "pause_slideshow": "Призупинити слайд-шоу",
-      "play_slideshow": "Відтворити слайд-шоу"
+      "play_slideshow": "Відтворити слайд-шоу",
+      "load_slide": "",
+      "next_slideshow": "",
+      "carousel": "",
+      "slide": ""
     },
     "featured_collection": {
-      "view_all_label": "Переглянути всі продукти в колекції {{ collection_name }}"
+      "view_all_label": "Переглянути всі продукти в колекції {{ collection_name }}",
+      "view_all": ""
     },
     "featured_blog": {
-      "onboarding_content": "Дайте своїм клієнтам короткий виклад публікації в блозі"
+      "onboarding_content": "Дайте своїм клієнтам короткий виклад публікації в блозі",
+      "view_all": "",
+      "onboarding_title": ""
+    },
+    "collection_list": {
+      "view_all": ""
+    },
+    "page": {
+      "title": ""
     }
   },
   "customer": {
@@ -3514,7 +3539,8 @@
       "total": "Всього",
       "total_refunded": "Повернено",
       "fulfilled_at_html": "Виконано {{ date }}",
-      "track_shipment": "Відстежити відправлення"
+      "track_shipment": "Відстежити відправлення",
+      "sku": ""
     },
     "orders": {
       "title": "Історія Замовлень",
@@ -3701,7 +3727,8 @@
         "title": "Ціноутворення за обсягом",
         "note": "Доступні оптові ціни",
         "minimum": "{{ quantity }} +",
-        "price_at_each": "за {{ price }} \/шт"
+        "price_at_each": "за {{ price }} \/шт",
+        "price_range": ""
       },
       "pickup_availability": {
         "view_store_info": "Переглянути інформацію про магазин",
@@ -3729,7 +3756,8 @@
       "xr_button": "Перегляньте у своєму просторі",
       "xr_button_label": "Переглядайте у своєму просторі, завантажуйте предмет у вікні доповненої реальності",
       "include_taxes": "З податком.",
-      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">Вартість доставки<\/a> розраховується при оформленні замовлення."
+      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">Вартість доставки<\/a> розраховується при оформленні замовлення.",
+      "sku": ""
     },
     "modal": {
       "label": "Медіа галерея"
@@ -3781,7 +3809,8 @@
       }
     },
     "404": {
-      "title": "Сторінку не знайдено"
+      "title": "Сторінку не знайдено",
+      "subtext": ""
     }
   },
   "localization": {
@@ -3806,7 +3835,10 @@
     "skip_to_product_info": "Перейти до інформації про продукт",
     "skip_to_text": "Перейти до вмісту",
     "refresh_page": "Вибір вибору призводить до повного оновлення сторінки.",
-    "close": "Закрити"
+    "close": "Закрити",
+    "unit_price_separator": "",
+    "vendor": "",
+    "error": ""
   },
   "blogs": {
     "article": {
@@ -3845,36 +3877,62 @@
       "login_form_password_placeholder": "Ваш пароль",
       "login_form_error": "Неправильний пароль!",
       "powered_by_shopify_html": "Цей магазин працюватиме на базі {{ shopify }}",
-      "admin_link_html": "Ви власник магазину? <a href=\"\/admin\" class=\"link underlined-link\">Увійдіть тут<\/a>"
+      "admin_link_html": "Ви власник магазину? <a href=\"\/admin\" class=\"link underlined-link\">Увійдіть тут<\/a>",
+      "login_form_password_label": "",
+      "login_form_submit": ""
     },
     "cart": {
       "view": "Переглянути кошик ( {{ count }} )",
-      "item_added": "Товар додано у ваш кошик"
+      "item_added": "Товар додано у ваш кошик",
+      "view_empty_cart": "Проглянути кошик"
     },
     "share": {
       "success_message": "Посилання скопійовано в буфер обміну",
-      "close": "Закрити частку"
+      "close": "Закрити частку",
+      "copy_to_clipboard": "",
+      "share_url": ""
     },
     "social": {
       "alt_text": {
         "share_on_facebook": "Поділіться на Facebook",
         "share_on_twitter": "Твітнути в Twitter",
         "share_on_pinterest": "Закріпити на Pinterest"
+      },
+      "links": {
+        "twitter": "",
+        "facebook": "",
+        "pinterest": "",
+        "instagram": "",
+        "tumblr": "",
+        "snapchat": "",
+        "youtube": "",
+        "vimeo": "",
+        "tiktok": ""
       }
     },
     "continue_shopping": "Продовжити покупки",
     "pagination": {
       "page": "{{ number }}",
-      "previous": "Попередня сторінка"
+      "previous": "Попередня сторінка",
+      "label": "",
+      "next": ""
     },
     "search": {
-      "reset": "Очистити термін пошуку"
+      "reset": "Очистити термін пошуку",
+      "search": "Пошук"
     },
     "slider": {
-      "next_slide": "Посуньте праворуч"
-    }
+      "next_slide": "Посуньте праворуч",
+      "of": "",
+      "previous_slide": "",
+      "name": ""
+    },
+    "filters": "",
+    "sort_title": ""
   },
   "newsletter": {
-    "success": "Дякуємо за підписку"
+    "success": "Дякуємо за підписку",
+    "label": "",
+    "button_label": ""
   }
 }
