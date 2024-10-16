@@ -9,26 +9,6 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "custom_css": [
-        ".banner--large:not(.banner--adapt) {min-height: 56rem;}",
-        "@media screen and (min-width: 1200px) {.banner--large:not(.banner--adapt) {min-height: 79rem; } .banner__media img {object-position: 0px -400px; }}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/IMG_1703.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "desktop_content_position": "bottom-right",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
     "collection_list_fKffjp": {
       "type": "collection-list",
       "blocks": {
@@ -85,16 +65,29 @@
         "padding_bottom": 0
       }
     },
+    "image_banner": {
+      "type": "image-banner",
+      "custom_css": [
+        ".banner--large:not(.banner--adapt) {min-height: 56rem;}",
+        "@media screen and (min-width: 1200px) {.banner--large:not(.banner--adapt) {min-height: 79rem; } .banner__media img {object-position: 0px -400px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_1703.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
     "image_banner_a886pa": {
       "type": "image-banner",
       "blocks": {
-        "heading_AmCw7V": {
-          "type": "heading",
-          "settings": {
-            "heading": "SPRING'24",
-            "heading_size": "h0"
-          }
-        },
         "text_8r6zNg": {
           "type": "text",
           "settings": {
@@ -115,7 +108,6 @@
         }
       },
       "block_order": [
-        "heading_AmCw7V",
         "text_8r6zNg",
         "buttons_7jWPMB"
       ],
@@ -125,7 +117,7 @@
         "@media screen and (min-width: 1200px) {.banner__heading {font-size: 64px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Rectangle_77_1.png",
+        "image": "shopify://shop_images/IMG_0360.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-right",
