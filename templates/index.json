@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -7,7 +16,7 @@
         "@media screen and (min-width: 1200px) {.banner--large:not(.banner--adapt) {min-height: 79rem; } .banner__media img {object-position: 0px -400px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/1_IMG_0022.jpg",
+        "image": "shopify://shop_images/IMG_1703.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-right",
@@ -116,7 +125,7 @@
         "@media screen and (min-width: 1200px) {.banner__heading {font-size: 64px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_77_1.png",
+        "image": "shopify://shop_images/Rectangle_77_1.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-right",
@@ -205,7 +214,7 @@
       "settings": {
         "title": "NEW",
         "heading_size": "h2",
-        "description": "<p><a href=\"\/collections\/new\" title=\"NEW\">ПЕРЕГЛЯНУТИ ВСІ<\/a><\/p>",
+        "description": "<p><a href=\"/collections/new\" title=\"NEW\">ПЕРЕГЛЯНУТИ ВСІ</a></p>",
         "show_description": false,
         "description_style": "body",
         "collection": "sale",
@@ -241,7 +250,7 @@
         "text_E8CrPV": {
           "type": "text",
           "settings": {
-            "text": "<p>Alnest поєднує в собі...<\/p>"
+            "text": "<p>Alnest поєднує в собі...</p>"
           }
         },
         "button_b8Ttk8": {
@@ -273,8 +282,8 @@
     }
   },
   "order": [
-    "image_banner",
     "collection_list_fKffjp",
+    "image_banner",
     "image_banner_a886pa",
     "featured_collection_ni9Wzc",
     "featured_collection_iPeVaA",
