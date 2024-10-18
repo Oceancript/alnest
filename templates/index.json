@@ -74,7 +74,7 @@
       "settings": {
         "image": "shopify://shop_images/IMG_1703.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "adapt",
         "desktop_content_position": "bottom-right",
         "show_text_box": false,
         "desktop_content_alignment": "center",
