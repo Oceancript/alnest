@@ -12,5 +12,16 @@
   "context": {
     "market": "international"
   },
-  "sections": {}
+  "sections": {
+    "image_banner_a886pa": {
+      "settings": {},
+      "blocks": {
+        "text_8r6zNg": {
+          "settings": {
+            "text": "NEW COLLECTION Spring 2025"
+          }
+        }
+      }
+    }
+  }
 }
