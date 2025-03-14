@@ -1,6 +1,15 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/1alnest_1.png",
+    "logo": "shopify://shop_images/1alnest_1.png",
     "logo_width": 170,
     "type_header_font": "inter_n4",
     "heading_scale": 100,
@@ -98,10 +107,10 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-1",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
-    "social_instagram_link": "",
+    "social_instagram_link": "https://www.instagram.com/alnest.official?igsh=NTQ3ZXl0ZmVidjRo",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "",
@@ -118,7 +127,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-6fa6a953-aab2-4f0e-b215-49c9ea0491c3",
-    "checkout_body_background_image": "shopify:\/\/shop_images\/IMG_0147_69e4a20b-7691-4bba-8711-3828297c1f64.jpg",
+    "checkout_body_background_image": "shopify://shop_images/IMG_0147_69e4a20b-7691-4bba-8711-3828297c1f64.jpg",
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#000000",
     "checkout_error_color": "#000000",
@@ -136,12 +145,10 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "10583289249535060075": {
-        "type": "shopify:\/\/apps\/basic-wishlist\/blocks\/popup\/1611f065-e251-4250-8609-2fa2f1877c57",
+        "type": "shopify://apps/basic-wishlist/blocks/popup/1611f065-e251-4250-8609-2fa2f1877c57",
         "disabled": true,
         "settings": {
           "icon_width": 36,
@@ -172,7 +179,7 @@
         }
       },
       "10603822535667782919": {
-        "type": "shopify:\/\/apps\/iwish-wishlist\/blocks\/app-embed\/7f9269b0-1b45-4d0c-8479-faf04f05d8ac",
+        "type": "shopify://apps/iwish-wishlist/blocks/app-embed/7f9269b0-1b45-4d0c-8479-faf04f05d8ac",
         "disabled": false,
         "settings": {
           "hide_float_icon": true,
@@ -193,7 +200,7 @@
           "drawer_title": "My Wishlist",
           "drawer_empty_description": "Explore more and shortlist some items",
           "drawer_empty_msg": "Your wishlist is empty!",
-          "drawer_login_msg": "Wishlist is not saved permanently yet. Please <a class=\"link-text\" href=\"\/account\/login\">log in<\/a> or <a class=\"link-text\" href=\"\/account\/register\">Create Account<\/a> to save it.",
+          "drawer_login_msg": "Wishlist is not saved permanently yet. Please <a class=\"link-text\" href=\"/account/login\">log in</a> or <a class=\"link-text\" href=\"/account/register\">Create Account</a> to save it.",
           "add_to_cart_txt": "Add To Cart",
           "add_all_to_cart_txt": "Add All To Cart",
           "drawer_sold_out": "Sold Out",
@@ -438,7 +445,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
