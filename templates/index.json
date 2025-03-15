@@ -117,7 +117,6 @@
         "@media screen and (min-width: 1200px) {.banner--large:not(.banner--adapt) {min-height: 79rem; } .banner__media img {object-position: 0px -400px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/IMG_1703.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "bottom-right",
@@ -189,44 +188,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection_zgV3hq": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".card__badge span {font-weight: 500; border-radius: 0px;}",
-        ".card--standard > .card__content .card__information {display: flex; align-items: flex-start; justify-content: space-between;}",
-        ".card__heading {flex-shrink: 0; font-size: 16px;}",
-        ".card__content .card-information {text-align: right;}",
-        ".card__content .card-information .price__container {font-weight: 500; font-size: 16px;}",
-        ".price__sale .price-item {display: block; margin: 0;}",
-        ".collection__title {display: flex; justify-content: space-between;}",
-        ".collection__title a {text-decoration: none;}"
-      ],
-      "settings": {
-        "title": "NEW",
-        "heading_size": "h2",
-        "description": "<p><a href=\"/collections/new\" title=\"NEW\">ПЕРЕГЛЯНУТИ ВСІ</a></p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "sale",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
     "rich_text_C4Q4Ld": {
       "type": "rich-text",
       "blocks": {
@@ -277,7 +238,6 @@
     "image_banner",
     "featured_collection_ni9Wzc",
     "featured_collection_iPeVaA",
-    "featured_collection_zgV3hq",
     "rich_text_C4Q4Ld"
   ]
 }
