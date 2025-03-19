@@ -66,13 +66,13 @@
         "featured_collection_MnTnTT": {
           "type": "featured_collection",
           "settings": {
-            "collection": "дитячий-одяг-1"
+            "collection": "взуття"
           }
         },
         "featured_collection_eRnVjB": {
           "type": "featured_collection",
           "settings": {
-            "collection": "family-look"
+            "collection": "дитячий-одяг"
           }
         },
         "featured_collection_3FMrrR": {
@@ -117,6 +117,8 @@
         "@media screen and (min-width: 1200px) {.banner--large:not(.banner--adapt) {min-height: 79rem; } .banner__media img {object-position: 0px -400px; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/IMG_4334.jpg",
+        "image_2": "shopify://shop_images/IMG_4359.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "bottom-right",
