@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "171217606573fc2740": {
       "type": "apps",
       "blocks": {
         "ez_add_breadcrumbs_app_block_K4d8DV": {
-          "type": "shopify:\/\/apps\/ez-add-breadcrumbs\/blocks\/app-block\/457dc635-4337-4779-8f31-361dd27778c8",
+          "type": "shopify://apps/ph-breadcrumbs/blocks/app-block/457dc635-4337-4779-8f31-361dd27778c8",
           "settings": {
             "show_breadcrumbs": true,
             "color": "#000000",
@@ -18,16 +27,16 @@
             "show_home_link": true,
             "show_last_crumb": true,
             "home_page": "Home",
-            "home_url": "\/",
+            "home_url": "/",
             "all_uppercase": false,
             "use_slider": false,
             "article_use_tag": true,
-            "separator": "<span> › <\/span>",
-            "css_tablet": "\/* font-family: Helvetica; *\/",
-            "css_mobile": "\/* font-family: Helvetica; *\/",
-            "custom_css": "\/* font-family: Helvetica; *\/",
-            "css_last_crumb": "\/* font-weight: medium; *\/",
-            "css_hover": "\/* text-decoration-line: underline; *\/",
+            "separator": "<span> › </span>",
+            "css_tablet": "/* font-family: Helvetica; */",
+            "css_mobile": "/* font-family: Helvetica; */",
+            "custom_css": "/* font-family: Helvetica; */",
+            "css_last_crumb": "/* font-weight: medium; */",
+            "css_hover": "/* text-decoration-line: underline; */",
             "menus": "*"
           }
         }
@@ -45,7 +54,7 @@
       "disabled": true,
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "color_scheme": "scheme-1"
       }
     },
