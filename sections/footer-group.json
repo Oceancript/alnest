@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -17,7 +17,7 @@
         "image_dG3frk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1alnest_1.png",
+            "image": "shopify://shop_images/1alnest_1.png",
             "image_width": 185,
             "alignment": ""
           }
@@ -26,7 +26,7 @@
           "type": "text",
           "settings": {
             "heading": "КОНТАКТИ",
-            "subtext": "<h5>Львів, вул.Романчука 2<\/h5><h5>Пон-Нед: 10:00-20:00<\/h5><h5>+38 067 41 40 282<\/h5><h5><\/h5><p><a href=\"https:\/\/linktr.ee\/alnest.ua\" title=\"https:\/\/linktr.ee\/alnest.ua\">SOCIAL MEDIA<\/a><\/p>"
+            "subtext": "<h5>Львів, вул.Романчука 2</h5><h5>Пон-Нед: 10:00-20:00</h5><h5>+38 067 41 40 282</h5><h5>ФОП Якимів Вероніка Ігорівна</h5><p><a href=\"https://linktr.ee/alnest.ua\" title=\"https://linktr.ee/alnest.ua\">SOCIAL MEDIA</a></p>"
           }
         },
         "link_list_tzWGb3": {
@@ -54,7 +54,7 @@
           "type": "text",
           "settings": {
             "heading": "",
-            "subtext": "<p>© 2019-2024 ALNEST<br\/>clothing, footwear & accessories brand<\/p>"
+            "subtext": "<p>© 2019-2024 ALNEST<br/>clothing, footwear & accessories brand</p>"
           }
         },
         "text_gCj9JX": {
@@ -62,7 +62,7 @@
           "disabled": true,
           "settings": {
             "heading": "",
-            "subtext": "<p><strong>FACEBOOK<\/strong><br\/>CLOTHES<br\/>- For kids<br\/>- For women<\/p><p><strong>TIKTOK<\/strong><\/p>"
+            "subtext": "<p><strong>FACEBOOK</strong><br/>CLOTHES<br/>- For kids<br/>- For women</p><p><strong>TIKTOK</strong></p>"
           }
         }
       },
