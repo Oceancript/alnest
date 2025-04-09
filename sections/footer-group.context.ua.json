@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "parent": "footer-group.json",
   "context": {
@@ -5,23 +14,22 @@
   },
   "sections": {
     "footer": {
-      "settings": {
-      },
+      "settings": {},
       "blocks": {
         "text_ppenLc": {
           "settings": {
             "heading": "Contacts",
-            "subtext": "<h5>Lviv, Romanchuka 2 <\/h5><h5>Mon-Sun: 10:00-20:00<\/h5><h5>+38 067 41 40 282<\/h5><h5><\/h5><p><a href=\"https:\/\/linktr.ee\/alnest.ua\" title=\"https:\/\/linktr.ee\/alnest.ua\">SOCIAL MEDIA<\/a><\/p>"
-          }
-        },
-        "link_list_JQpcVi": {
-          "settings": {
-            "heading": "CLIENT"
+            "subtext": "<h5>Lviv, Romanchuka 2 </h5><h5>Mon-Sun: 10:00-20:00</h5><h5>+38 067 41 40 282</h5><h5>ФОП Якимів Вероніка Ігорівна</h5><p><a href=\"https://linktr.ee/alnest.ua\" title=\"https://linktr.ee/alnest.ua\">SOCIAL MEDIA</a></p>"
           }
         },
         "link_list_tzWGb3": {
           "settings": {
             "heading": "CATALOG"
+          }
+        },
+        "link_list_JQpcVi": {
+          "settings": {
+            "heading": "CLIENT"
           }
         },
         "link_list_hEr4Df": {
