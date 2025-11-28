@@ -284,7 +284,21 @@
       }
     </script>
     <script data-orderly-url="https://orderly-app.io" src="https://storage.googleapis.com/orderly-checkout/checkout.min.js" async></script>
-  <script data-chekly-url="https://chekly-app.com" data-chekly-theme="chekly" data-chekly-script="GLOBAL" src="{{ 'chekly-script.js' | asset_url }}" async></script>
+  
+    {% if customer %}
+        {% # CHEKLY-CUSTOMER-SCRIPT-START # %}
+        <script>
+            window.Shopify = window.Shopify || {};
+            Shopify.customer = {
+                firstName: "{{ customer.first_name }}",
+                lastName: "{{ customer.last_name }}",
+                email: "{{ customer.email }}",
+                phone: "{{ customer.phone }}"
+            };
+        </script>
+        {% # CHEKLY-CUSTOMER-SCRIPT-END # %}
+    {% endif %}
+    <script data-chekly-url="https://chekly-app.com" data-chekly-theme="chekly" data-chekly-script="GLOBAL" src="{{ 'chekly-script.js' | asset_url }}" async></script>
 </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
