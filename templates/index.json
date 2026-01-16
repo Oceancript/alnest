@@ -61,13 +61,13 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Hedonist</strong> <em>Distilled</em>",
-            "heading_size": "h0"
+            "heading_size": "h2"
           }
         },
         "text_wHPmF3": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "",
             "text_style": "body"
           }
         },
@@ -79,7 +79,7 @@
             "button_style_secondary_1": false,
             "button_label_2": "Button label",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -88,16 +88,15 @@
         "text_wHPmF3",
         "buttons_eNL9Ej"
       ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/0-02-05-b5db703888c9fad0f0372a3be516e87aeaf9256bb296ad80997bfbf15fd3e86a_220beaa2a8524704.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
