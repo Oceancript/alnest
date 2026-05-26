@@ -83,55 +83,6 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_6CeNUt": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_4yw3W3": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Hedonist</strong> <em>Distilled</em>",
-            "heading_size": "h2"
-          }
-        },
-        "text_wHPmF3": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_eNL9Ej": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Переглянути",
-            "button_link_1": "shopify://collections/hedonist-distilled",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_4yw3W3",
-        "text_wHPmF3",
-        "buttons_eNL9Ej"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/0-02-05-b5db703888c9fad0f0372a3be516e87aeaf9256bb296ad80997bfbf15fd3e86a_220beaa2a8524704.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "collection_list_fKffjp": {
       "type": "collection-list",
       "blocks": {
@@ -294,7 +245,6 @@
   "order": [
     "image_banner_a886pa",
     "featured_collection_nRdMEH",
-    "image_banner_6CeNUt",
     "collection_list_fKffjp",
     "featured_collection_ni9Wzc",
     "featured_collection_iPeVaA",
