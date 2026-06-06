@@ -41,8 +41,9 @@
         "@media screen and (min-width: 1200px) {.banner__heading {font-size: 64px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/0-02-05-82b2494be965b73668c47291305d290c49df4238c4c3c383d79d7251568a6cb6_7bbc25a7361b75be_3d6afa54-3db5-4c0d-9f8b-78ce582cc9d4.jpg",
-        "image_overlay_opacity": 0,
+        "image": "shopify://shop_images/0-02-05-df082a7eb6047a13394682f3278d9b66d6f28588aeff62816fb554397f272cab_20f050baab90bfb6.jpg",
+        "image_2": "shopify://shop_images/0-02-05-5b15db41b968790c3dc0ae24af81610e8a5184944265f1649a6450a670799818_bdfb2013e622cc47.jpg",
+        "image_overlay_opacity": 10,
         "image_height": "adapt",
         "desktop_content_position": "bottom-right",
         "show_text_box": false,
