@@ -211,6 +211,21 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "video_k3UiFM": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -218,6 +233,7 @@
     "collection_list_fKffjp",
     "featured_collection_ni9Wzc",
     "featured_collection_iPeVaA",
-    "rich_text_C4Q4Ld"
+    "rich_text_C4Q4Ld",
+    "video_k3UiFM"
   ]
 }
